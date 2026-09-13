@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://alsaeedah.vercel.app/sitemap.xml
+Sitemap: https://Alkhazraji.vercel.app/sitemap.xml

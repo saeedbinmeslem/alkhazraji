@@ -18,8 +18,8 @@ import { ValidationError } from './errors.js';
  * @returns {boolean} True if the slug is valid.
  *
  * @example
- * validateSlug('mens-watches')     // true
- * validateSlug('ساعات-رجالية')   // true
+ * validateSlug('mens-supplies')     // true
+ * validateSlug('مستلزمات-رجالية')   // true
  * validateSlug('--bad')            // false
  * validateSlug('')                 // false
  * validateSlug('Has Space')        // false

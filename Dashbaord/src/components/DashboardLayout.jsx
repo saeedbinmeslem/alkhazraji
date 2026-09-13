@@ -233,12 +233,12 @@ const DashboardLayout = ({ children }) => {
                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                         <div style={{ position: 'relative', flexShrink: 0 }}>
                             <img
-                                src={logo} alt="متجر السعيدة" style={{
+                                src={logo} alt="متجر الخزرجي" style={{
                                     width: '48px',
                                     height: '48px',
                                     borderRadius: '12px',
-                                    boxShadow: '0 0 12px rgba(212, 175, 55, 0.15)',
-                                    border: '1px solid rgba(212, 175, 55, 0.25)',
+                                    boxShadow: '0 0 12px rgba(var(--primary-rgb), 0.15)',
+                                    border: '1px solid rgba(var(--primary-rgb), 0.25)',
                                     transition: '0.3s',
                                     objectFit: 'cover'
                                 }}
@@ -246,7 +246,7 @@ const DashboardLayout = ({ children }) => {
                         </div>
                         <div className="brand-name" style={{ transition: '0.3s', minWidth: 0 }}>
                             <h2 style={{ fontSize: '1.05rem', color: '#fff', fontWeight: '700', letterSpacing: '0.3px', lineHeight: 1.2 }}>
-                                <span style={{ color: 'var(--primary)' }}>متجر</span> السعيدة
+                                <span style={{ color: 'var(--primary)' }}>متجر</span> الخزرجي
                             </h2>
                             <p className="brand-desc" style={{ fontSize: '0.72rem', color: 'var(--text-muted)', fontWeight: '400', marginTop: '2px' }}>
                                 نظام إدارة المتجر
@@ -307,11 +307,11 @@ const DashboardLayout = ({ children }) => {
                             height: '36px',
                             minWidth: '36px',
                             borderRadius: '10px',
-                            background: 'rgba(212, 175, 55, 0.08)',
+                            background: 'rgba(var(--primary-rgb), 0.08)',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            border: '1px solid rgba(212, 175, 55, 0.15)'
+                            border: '1px solid rgba(var(--primary-rgb), 0.15)'
                         }}>
                             <User size={16} color="var(--primary)" />
                         </div>

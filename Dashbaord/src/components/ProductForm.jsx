@@ -687,7 +687,7 @@ const ProductForm = ({ initialData, onSubmit, title, subTitle }) => {
 
                     <div className="form-grid">
                         <div style={formGroup}>
-                            <label style={labelStyle}>اسم الساعة</label>
+                            <label style={labelStyle}>اسم المنتج</label>
                             <input type="text" placeholder="مثلاً: رويال جولد" value={formData.name} onChange={e => setFormData({ ...formData, name: e.target.value })} required style={inputStyle} />
                         </div>
                         <div style={formGroup}>
@@ -702,7 +702,7 @@ const ProductForm = ({ initialData, onSubmit, title, subTitle }) => {
 
                     {/* Pricing Models Section */}
                     {formData.images.length > 1 && (
-                        <div style={{ background: 'rgba(212, 175, 55, 0.03)', padding: isMobile ? '20px' : '30px', borderRadius: '24px', border: '1px solid rgba(212, 175, 55, 0.1)', marginBottom: '30px' }}>
+                        <div style={{ background: 'rgba(var(--primary-rgb), 0.03)', padding: isMobile ? '20px' : '30px', borderRadius: '24px', border: '1px solid rgba(var(--primary-rgb), 0.1)', marginBottom: '30px' }}>
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '25px', flexWrap: 'wrap', gap: '20px' }}>
                                 <div>
                                     <h3 style={{ color: 'var(--primary)', margin: '0 0 5px 0', fontSize: isMobile ? '1.1rem' : '1.3rem', fontWeight: '900' }}>أسعار الموديلات</h3>
@@ -733,7 +733,7 @@ const ProductForm = ({ initialData, onSubmit, title, subTitle }) => {
                                         key={idx} 
                                         onClick={() => toggleImageSelection(v.image)}
                                         style={{ 
-                                            background: selectedImagesForBulk.includes(v.image) ? 'rgba(212,175,55,0.1)' : 'rgba(255,255,255,0.02)',
+                                            background: selectedImagesForBulk.includes(v.image) ? 'rgba(var(--primary-rgb),0.1)' : 'rgba(255,255,255,0.02)',
                                             padding: '15px', borderRadius: '20px', border: selectedImagesForBulk.includes(v.image) ? '2px solid var(--primary)' : '1px solid var(--glass-border)',
                                             cursor: 'pointer', transition: '0.3s', position: 'relative'
                                         }}
@@ -796,7 +796,7 @@ const ProductForm = ({ initialData, onSubmit, title, subTitle }) => {
                     </div>
 
                     <div style={formGroup}>
-                        <label style={labelStyle}>صور الساعة (كل صورة تمثل موديلاً مستقلاً)</label>
+                        <label style={labelStyle}>صور المنتج (كل صورة تمثل موديلاً مستقلاً)</label>
                         <div style={{ display: 'flex', gap: '10px', marginBottom: '15px' }}>
                             <label className="btn-icon" style={{ cursor: 'pointer', background: 'var(--primary)', color: '#000', width: '100%', padding: '15px', borderRadius: '14px', justifyContent: 'center' }}>
                                 <Plus size={20} /> إضافة صور (اختر عدة صور)
@@ -892,7 +892,7 @@ const ProductForm = ({ initialData, onSubmit, title, subTitle }) => {
                     <div style={formGroup}>
                         <label style={labelStyle}>وصف المنتج (يتوسع تلقائياً)</label>
                         <textarea 
-                            placeholder="اكتب تفاصيل الساعة والمميزات هنا..." 
+                            placeholder="اكتب تفاصيل المنتج والمميزات هنا..." 
                             value={formData.description} 
                             onChange={e => {
                                 setFormData({ ...formData, description: e.target.value });
@@ -926,7 +926,7 @@ const ProductForm = ({ initialData, onSubmit, title, subTitle }) => {
                             cursor: uploading ? 'not-allowed' : 'pointer'
                         }}
                     >
-                        {uploading ? 'جاري الرفع... يرجى الانتظار' : <><Save size={22} /> حفظ الساعة</>}
+                        {uploading ? 'جاري الرفع... يرجى الانتظار' : <><Save size={22} /> حفظ المنتج</>}
                     </button>
                 </form >
             </div >

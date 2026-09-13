@@ -10,7 +10,7 @@ const resolveSharedDepsPlugin = () => ({
   resolveId(source, importer) {
     // If the import comes from the shared directory and is a bare specifier (e.g. 'react', 'firebase/firestore')
     if (importer && importer.includes(path.normalize('/shared/').replace(/\\/g, '/')) && !source.startsWith('.') && !source.startsWith('/')) {
-      // Resolve it as if it was imported from the AL-SAEEDAH root
+      // Resolve it as if it was imported from the Al-Khazraji root
       return this.resolve(source, path.resolve(__dirname, 'index.html'), { skipSelf: true })
         .then(resolved => resolved || null);
     }

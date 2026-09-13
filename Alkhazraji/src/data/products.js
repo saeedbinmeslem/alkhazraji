@@ -2,8 +2,8 @@ export const products = [
     {
         id: '1',
         displayId: '1001',
-        name: 'ساعة رويال كلاسيك',
-        description: 'ساعة فاخرة بتصميم كلاسيكي أنيق، مصنوعة من الفولاذ المقاوم للصدأ، مقاومة للماء حتى عمق 50 متر.',
+        name: 'منتج رويال كلاسيك',
+        description: 'منتج فاخر بتصميم كلاسيكي أنيق، مصنوعة من الفولاذ المقاوم للصدأ، مقاومة للماء حتى عمق 50 متر.',
         price: 450,
         category: 'men',
         style: 'classic',
@@ -14,7 +14,7 @@ export const products = [
     {
         id: '2',
         displayId: '1002',
-        name: 'ساعة إليجانس نسائية',
+        name: 'منتج إليجانس نسائية',
         description: 'تصميم عصري وجذاب يناسب جميع المناسبات، مرصعة بأحجار الزركون اللامعة.',
         price: 320,
         category: 'women',
@@ -26,8 +26,8 @@ export const products = [
     {
         id: '3',
         displayId: '1003',
-        name: 'ساعة سبورت برو',
-        description: 'ساعة رياضية متعددة الوظائف، كرونوغراف، منبه، وتوقيت عالمي.',
+        name: 'منتج سبورت برو',
+        description: 'منتج رياضية متعددة الوظائف، كرونوغراف، منبه، وتوقيت عالمي.',
         price: 280,
         category: 'men',
         style: 'sport',
@@ -38,7 +38,7 @@ export const products = [
     {
         id: '4',
         displayId: '1004',
-        name: 'ساعة جولد إديشن',
+        name: 'منتج جولد إديشن',
         description: 'إصدار ذهبي محدود، تصميم فريد يعكس الفخامة والتميز.',
         price: 850,
         category: 'women',
@@ -50,8 +50,8 @@ export const products = [
     {
         id: '5',
         displayId: '1005',
-        name: 'ساعة أطفال ذكية',
-        description: 'ساعة ذكية للأطفال مع خاصية التتبع ومكالمات الفيديو.',
+        name: 'منتج أطفال ذكية',
+        description: 'منتج ذكية للأطفال مع خاصية التتبع ومكالمات الفيديو.',
         price: 150,
         category: 'kids',
         style: 'modern',
@@ -62,8 +62,8 @@ export const products = [
         {
         id: '6',
         displayId: '1006',
-        name: 'ساعة روي إديشن',
-        description: 'ساعة ذكية للأطفال مع خاصية التتبع ومكالمات الفيديو.',
+        name: 'منتج روي إديشن',
+        description: 'منتج ذكية للأطفال مع خاصية التتبع ومكالمات الفيديو.',
         price: 150,
         category: 'kids',
         style: 'modern',

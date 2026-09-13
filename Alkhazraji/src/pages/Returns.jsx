@@ -92,7 +92,7 @@ export default function Returns() {
               fontWeight: 600,
             }}
           >
-            ALSAEEDAH
+            Alkhazraji
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -166,8 +166,8 @@ export default function Returns() {
                   alignItems: 'center',
                   gap: '16px',
                   padding: '14px 16px',
-                  background: 'rgba(212,175,55,0.04)',
-                  border: '1px solid rgba(212,175,55,0.12)',
+                  background: 'rgba(var(--primary-rgb),0.04)',
+                  border: '1px solid rgba(var(--primary-rgb),0.12)',
                   borderRadius: '12px',
                 }}
               >
@@ -277,7 +277,7 @@ export default function Returns() {
             للبدء في عملية الإرجاع، تواصلوا مع خدمة العملاء عبر واتساب
           </p>
           <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            {['772754414', '775055319'].map((num) => (
+            {['772503986'].map((num) => (
               <a
                 key={num}
                 href={`https://wa.me/967${num}`}
@@ -314,7 +314,7 @@ export default function Returns() {
             lineHeight: 1.8,
           }}
         >
-          متجر السعيدة — رضاكم هو أولويتنا القصوى
+          متجر الخزرجي — رضاكم هو أولويتنا القصوى
         </motion.p>
       </div>
     </div>

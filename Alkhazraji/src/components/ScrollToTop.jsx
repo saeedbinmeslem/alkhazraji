@@ -44,7 +44,7 @@ export default function ScrollToTop() {
                         scale: 1.1, 
                         backgroundColor: 'var(--primary)', 
                         color: '#000',
-                        boxShadow: '0 0 20px rgba(212, 175, 55, 0.6)' 
+                        boxShadow: '0 0 20px rgba(var(--primary-rgb), 0.6)' 
                     }}
                     whileTap={{ scale: 0.9 }}
                     onClick={scrollToTop}

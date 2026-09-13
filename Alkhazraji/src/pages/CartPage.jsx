@@ -92,7 +92,7 @@ export default function CartPage() {
                                 <ArrowRight size={20} />
                             </button>
                             <div>
-                                <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.75rem', letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--primary)', marginBottom: '4px', fontWeight: 500 }}>ALSAEEDAH</p>
+                                <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.75rem', letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--primary)', marginBottom: '4px', fontWeight: 500 }}>Alkhazraji</p>
                                 <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', fontWeight: 700, color: 'var(--text-main)', margin: 0, lineHeight: 1.1 }}>سلة المشتريات</h1>
                             </div>
                         </div>
@@ -118,7 +118,7 @@ export default function CartPage() {
                                 <PackageOpen size={36} color="var(--primary)" strokeWidth={1.5} />
                             </div>
                             <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', color: 'var(--text-main)', fontWeight: 600 }}>السلة فارغة</h2>
-                            <p style={{ fontFamily: 'var(--font-main)', color: 'var(--text-dim)', maxWidth: '300px', lineHeight: 1.8 }}>لم تضف أي منتجات بعد. تصفح مجموعتنا من الساعات الفاخرة.</p>
+                            <p style={{ fontFamily: 'var(--font-main)', color: 'var(--text-dim)', maxWidth: '300px', lineHeight: 1.8 }}>لم تضف أي منتجات بعد. تصفح مجموعتنا من المستلزمات الفاخرة.</p>
                             <button
                                 onClick={() => navigate('/')}
                                 className="btn-primary"

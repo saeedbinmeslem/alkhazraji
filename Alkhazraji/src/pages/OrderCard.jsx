@@ -19,7 +19,7 @@ export default function OrderCard({ order, isMobile }) {
         return { color: '#22c55e', bg: 'rgba(34, 197, 94, 0.1)', icon: <CheckCircle2 size={16} />, label: 'تم التوصيل' };
       case 'pending':
       case 'pending review':
-        return { color: '#d4af37', bg: 'rgba(212, 175, 55, 0.1)', icon: <Clock size={16} />, label: 'قيد المراجعة' };
+        return { color: 'var(--primary)', bg: 'rgba(var(--primary-rgb), 0.1)', icon: <Clock size={16} />, label: 'قيد المراجعة' };
       case 'preparing':
         return { color: '#3b82f6', bg: 'rgba(59, 130, 246, 0.1)', icon: <Package size={16} />, label: 'قيد التجهيز' };
       case 'shipped':
@@ -126,12 +126,12 @@ export default function OrderCard({ order, isMobile }) {
               width: isMobile ? '36px' : '42px',
               height: isMobile ? '36px' : '42px',
               borderRadius: '10px',
-              background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.05))',
+              background: 'linear-gradient(135deg, rgba(var(--primary-rgb), 0.1), rgba(var(--primary-rgb), 0.05))',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               color: 'var(--primary)',
-              border: '1px solid rgba(212,175,55,0.2)',
+              border: '1px solid rgba(var(--primary-rgb),0.2)',
               flexShrink: 0
             }}>
               <Package size={isMobile ? 18 : 20} />

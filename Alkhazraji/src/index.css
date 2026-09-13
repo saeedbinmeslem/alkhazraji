@@ -4,9 +4,12 @@
 :root {
   /* Safe Area: resolves to the OS status-bar height on mobile, 0px on desktop */
   --safe-area-top: env(safe-area-inset-top, 0px);
-  --primary: #d4af37;
-  /* Gold */
-  --primary-hover: #b4932a;
+  --primary: #C62828;
+  /* Red */
+  --primary-hover: #B71C1C;
+  --primary-active: #991B1B;
+  --primary-light: #FEE2E2;
+  --primary-rgb: 198, 40, 40;
 
   /* Default Dark Theme - Minimalist Luxury */
   --bg-main: #000000;
@@ -39,8 +42,8 @@
   background-color: var(--store-bg-color);
   
   /* boredr for inputs in login page */
-  --focus-input-color:rgba(212, 175, 55, 0.10);
-  --border-input-color:rgba(212, 175, 55, 0.10);
+  --focus-input-color:rgba(var(--primary-rgb), 0.10);
+  --border-input-color:rgba(var(--primary-rgb), 0.10);
   
 }
 
@@ -66,8 +69,8 @@
   --glass-hover: rgba(0, 0, 0, 0.05);
 
   /* border for inputs in login page */
-  --focus-input-color:rgba(255, 196, 0, 0.384);
-  --border-input-color:rgba(255, 196, 0, 0.24);
+  --focus-input-color:rgba(var(--primary-rgb), 0.384);
+  --border-input-color:rgba(var(--primary-rgb), 0.24);
 }
 
 * {
@@ -166,7 +169,7 @@ input, textarea, [contenteditable="true"] {
 .btn-primary:hover {
   background: var(--primary-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.25);
+  box-shadow: 0 8px 20px rgba(var(--primary-rgb), 0.25);
 }
 
 .cancel-btn:hover {
@@ -275,7 +278,7 @@ input, textarea, [contenteditable="true"] {
 }
 
 .nav-link:hover {
-  background: rgba(212, 175, 55, 0.1);
+  background: rgba(var(--primary-rgb), 0.1);
   color: var(--primary);
 }
 
@@ -421,14 +424,14 @@ input, textarea, [contenteditable="true"] {
 
 .option-chip:hover {
   border-color: var(--primary);
-  background: rgba(212, 175, 55, 0.05);
+  background: rgba(var(--primary-rgb), 0.05);
 }
 
 .option-chip.active {
   background: var(--primary);
   color: var(--btn-text);
   border-color: var(--primary);
-  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+  box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.3);
 }
 
 @media (max-width: 900px) {
@@ -529,7 +532,7 @@ input, textarea, [contenteditable="true"] {
 @media (hover: hover) and (pointer: fine) {
   .product-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 16px 36px rgba(212, 175, 55, 0.12), 0 0 0 1px rgba(212, 175, 55, 0.25);
+    box-shadow: 0 16px 36px rgba(var(--primary-rgb), 0.12), 0 0 0 1px rgba(var(--primary-rgb), 0.25);
   }
 }
 
@@ -591,7 +594,7 @@ input, textarea, [contenteditable="true"] {
 .media-toggle-btn.active {
   background: var(--primary);
   color: var(--btn-text);
-  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.5);
+  box-shadow: 0 2px 8px rgba(var(--primary-rgb), 0.5);
 }
 
 .wishlist-btn {
@@ -614,7 +617,7 @@ input, textarea, [contenteditable="true"] {
 }
 
 .wishlist-btn:hover {
-  background: rgba(212, 175, 55, 0.2);
+  background: rgba(var(--primary-rgb), 0.2);
   border-color: var(--primary);
   transform: scale(1.1);
 }
@@ -632,8 +635,8 @@ input, textarea, [contenteditable="true"] {
 .fav-spinner {
   width: 18px;
   height: 18px;
-  border: 2px solid rgba(212, 175, 55, 0.3);
-  border-top-color: var(--primary, #d4af37);
+  border: 2px solid rgba(var(--primary-rgb), 0.3);
+  border-top-color: var(--primary, var(--primary));
   border-radius: 50%;
   animation: fav-spin 0.65s linear infinite;
   display: inline-block;
@@ -733,7 +736,7 @@ input, textarea, [contenteditable="true"] {
 }
 
 .btn-add-cart {
-  background: linear-gradient(135deg, var(--primary), #b38f24);
+  background: linear-gradient(135deg, var(--primary), var(--primary-hover));
   color: var(--btn-text);
   border: none;
   border-radius: 12px;
@@ -746,13 +749,13 @@ input, textarea, [contenteditable="true"] {
   gap: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  box-shadow: 0 4px 15px rgba(var(--primary-rgb), 0.3);
 }
 
 .btn-add-cart:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
-  background: linear-gradient(135deg, #e6c550, var(--primary));
+  box-shadow: 0 6px 20px rgba(var(--primary-rgb), 0.5);
+  background: linear-gradient(135deg, var(--primary-light), var(--primary));
 }
 
 .btn-inquiry {
@@ -919,12 +922,12 @@ input, textarea, [contenteditable="true"] {
   transform: translateX(-50%);
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at top, rgba(212, 175, 55, 0.35) 0%, transparent 70%);
+  background: radial-gradient(circle at top, rgba(var(--primary-rgb), 0.35) 0%, transparent 70%);
   mix-blend-mode: screen;
 }
 
 [data-theme='light'] .cinematic-spotlight {
-  background: radial-gradient(circle at top, rgba(212, 175, 55, 0.5) 0%, transparent 70%);
+  background: radial-gradient(circle at top, rgba(var(--primary-rgb), 0.5) 0%, transparent 70%);
 }
 
 .cinematic-aurora {
@@ -935,7 +938,7 @@ input, textarea, [contenteditable="true"] {
   left: 50%;
   margin-top: -1500px;
   margin-left: -1500px;
-  background: conic-gradient(from 0deg at 50% 50%, rgba(212, 175, 55, 0.12) 0deg, transparent 60deg, rgba(255, 255, 255, 0.08) 120deg, transparent 180deg, rgba(212, 175, 55, 0.15) 240deg, transparent 300deg, rgba(212, 175, 55, 0.12) 360deg);
+  background: conic-gradient(from 0deg at 50% 50%, rgba(var(--primary-rgb), 0.12) 0deg, transparent 60deg, rgba(255, 255, 255, 0.08) 120deg, transparent 180deg, rgba(var(--primary-rgb), 0.15) 240deg, transparent 300deg, rgba(var(--primary-rgb), 0.12) 360deg);
   filter: blur(80px);
   animation: rotateAurora 30s linear infinite;
   opacity: 1;
@@ -946,7 +949,7 @@ input, textarea, [contenteditable="true"] {
   left: 80%;
   animation-direction: reverse;
   animation-duration: 40s;
-  background: conic-gradient(from 180deg at 50% 50%, rgba(212, 175, 55, 0.12) 0deg, transparent 90deg, rgba(255, 255, 255, 0.08) 180deg, transparent 270deg, rgba(212, 175, 55, 0.12) 360deg);
+  background: conic-gradient(from 180deg at 50% 50%, rgba(var(--primary-rgb), 0.12) 0deg, transparent 90deg, rgba(255, 255, 255, 0.08) 180deg, transparent 270deg, rgba(var(--primary-rgb), 0.12) 360deg);
 }
 
 @keyframes rotateAurora {
@@ -966,7 +969,7 @@ input, textarea, [contenteditable="true"] {
 .cinematic-orb.orb-1 {
   width: 40vw;
   height: 40vw;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.25), transparent);
+  background: radial-gradient(circle, rgba(var(--primary-rgb), 0.25), transparent);
   top: -10%;
   left: -10%;
 }
@@ -1003,7 +1006,7 @@ input, textarea, [contenteditable="true"] {
   height: var(--size);
   background: var(--primary);
   border-radius: 50%;
-  box-shadow: 0 0 10px var(--primary), 0 0 20px rgba(212, 175, 55, 0.5);
+  box-shadow: 0 0 10px var(--primary), 0 0 20px rgba(var(--primary-rgb), 0.5);
   animation: floatParticle var(--duration) linear infinite;
   animation-delay: var(--delay);
   opacity: 0;
@@ -1062,11 +1065,11 @@ input, textarea, [contenteditable="true"] {
 
 .featured-layout:hover {
   transform: translateY(-5px);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(212, 175, 55, 0.3);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(var(--primary-rgb), 0.3);
 }
 
 [data-theme='light'] .featured-layout:hover {
-  box-shadow: 0 30px 60px rgba(0,0,0,0.1), 0 0 0 1px rgba(212, 175, 55, 0.4);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.1), 0 0 0 1px rgba(var(--primary-rgb), 0.4);
 }
 
 .featured-media {
@@ -1286,7 +1289,7 @@ input, textarea, [contenteditable="true"] {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.4);
+  box-shadow: 0 10px 20px rgba(var(--primary-rgb), 0.4);
   transform: translateY(20px);
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }

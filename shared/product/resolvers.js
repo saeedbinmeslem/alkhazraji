@@ -53,8 +53,8 @@ export const resolveTaxonomyLabel = (product, field) => {
  * @returns {string}
  */
 const getLegacyCategoryFallback = (cat) => {
-    if (cat === 'men') return 'ساعات رجالية';
-    if (cat === 'women') return 'ساعات نسائية';
-    if (cat === 'children' || cat === 'kids') return 'ساعات أطفال';
-    return 'ساعات فاخرة';
+    if (cat === 'men') return 'مستلزمات رجالية';
+    if (cat === 'women') return 'مستلزمات نسائية';
+    if (cat === 'children' || cat === 'kids') return 'مستلزمات أطفال';
+    return 'مستلزمات فاخرة';
 };

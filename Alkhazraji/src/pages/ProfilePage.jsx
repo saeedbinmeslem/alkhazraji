@@ -169,7 +169,7 @@ export default function ProfilePage({ initialTab = 'profile' }) {
                             <ArrowRight size={20} />
                         </button>
                         <div>
-                            <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.75rem', letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--primary)', marginBottom: '4px', fontWeight: 500 }}>ALSAEEDAH</p>
+                            <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.75rem', letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--primary)', marginBottom: '4px', fontWeight: 500 }}>Alkhazraji</p>
                             <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', fontWeight: 700, color: 'var(--text-main)', margin: 0, lineHeight: 1.1 }}>حسابي</h1>
                         </div>
                     </div>
@@ -210,7 +210,7 @@ export default function ProfilePage({ initialTab = 'profile' }) {
                                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
                                         <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.3rem', fontWeight: 600, color: 'var(--text-main)', margin: 0 }}>البيانات الشخصية</h2>
                                         {!isEditing ? (
-                                            <button onClick={() => setIsEditing(true)} style={{ display: 'flex', alignItems: 'center', gap: '6px', background: 'rgba(212,175,55,0.1)', border: '1px solid rgba(212,175,55,0.3)', color: 'var(--primary)', borderRadius: '10px', padding: '8px 16px', cursor: 'pointer', fontFamily: 'var(--font-main)', fontSize: '0.85rem', fontWeight: 600 }}>
+                                            <button onClick={() => setIsEditing(true)} style={{ display: 'flex', alignItems: 'center', gap: '6px', background: 'rgba(var(--primary-rgb),0.1)', border: '1px solid rgba(var(--primary-rgb),0.3)', color: 'var(--primary)', borderRadius: '10px', padding: '8px 16px', cursor: 'pointer', fontFamily: 'var(--font-main)', fontSize: '0.85rem', fontWeight: 600 }}>
                                                 <Edit2 size={15} /> تعديل
                                             </button>
                                         ) : (

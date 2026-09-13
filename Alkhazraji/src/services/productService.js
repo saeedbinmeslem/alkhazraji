@@ -1,112 +1,87 @@
-import { db } from '../firebase/config';
-import { FirestoreProductRepository } from '../../../shared/product/infrastructure/FirestoreProductRepository.js';
-import { ProductDAL } from '../../../shared/product/infrastructure/cache/ProductDAL.js';
-import { resolveFilters } from './productQueryBuilder';
+import { products } from '../data/products.js';
 
-const firestoreRepository = new FirestoreProductRepository(db);
-export const productRepository = new ProductDAL(firestoreRepository);
-
-export const fetchProductsFromFirestore = async () => {
-    return await productRepository.getLatest(1000); // Or another appropriate fallback
+const mockDal = {
+    getLatest: async () => products,
+    getBestSellers: async () => products.filter(p => p.featured),
+    getPaginated: async (filters, page, pageSize) => {
+        let result = products;
+        if (filters) {
+            // Very basic filtering mock
+            if (filters.category) result = result.filter(p => p.category === filters.category);
+        }
+        const start = page * pageSize;
+        return result.slice(start, start + pageSize);
+    },
+    getRelated: async (id, limitCount) => {
+        const current = products.find(p => String(p.id) === String(id));
+        if (!current) return products.slice(0, limitCount);
+        return products.filter(p => String(p.id) !== String(id) && p.category === current.category).slice(0, limitCount);
+    },
+    getByIds: async (ids) => {
+        return products.filter(p => ids.map(String).includes(String(p.id)));
+    },
+    getAvailableBrandIds: async (categoryIds) => {
+        if (!categoryIds || categoryIds.length === 0) return Array.from(new Set(products.map(p => p.brandId).filter(Boolean)));
+        return Array.from(new Set(products.filter(p => categoryIds.includes(p.category)).map(p => p.brandId).filter(Boolean)));
+    },
+    getById: async (id) => products.find(p => String(p.id) === String(id)),
+    subscribeToList: (opts, callback) => {
+        callback({ data: products });
+        return () => {};
+    },
+    subscribeToLatestSWR: (limit, callback) => {
+        callback(products.slice(0, limit));
+        return () => {};
+    },
+    subscribeToBestSellersSWR: (limit, callback) => {
+        callback(products.filter(p => p.featured).slice(0, limit));
+        return () => {};
+    },
+    subscribeToRelatedSWR: (id, limitCount, callback) => {
+        const current = products.find(p => String(p.id) === String(id));
+        let rel = products.filter(p => String(p.id) !== String(id));
+        if (current) rel = rel.filter(p => p.category === current.category);
+        callback(rel.slice(0, limitCount));
+        return () => {};
+    },
+    subscribeToPaginatedSWR: (filters, page, pageSize, cursor, callback) => {
+        let result = products;
+        if (filters && filters.category) result = result.filter(p => p.category === filters.category);
+        const start = page * pageSize;
+        callback(result.slice(start, start + pageSize));
+        return () => {};
+    },
+    subscribeToDetailSWR: (id, callback) => {
+        const current = products.find(p => String(p.id) === String(id));
+        callback(current || null);
+        return () => {};
+    }
 };
 
-export const fetchFreshProductsByIds = async (ids) => {
-    return await firestoreRepository.getByIds(ids);
-};
+export const productRepository = mockDal;
 
-export const fetchLatestProducts = async () => {
-    return await productRepository.getLatest();
-};
-
-export const fetchBestSellers = async () => {
-    return await productRepository.getBestSellers();
-};
-
+export const fetchProductsFromFirestore = async () => mockDal.getLatest();
+export const fetchFreshProductsByIds = async (ids) => mockDal.getByIds(ids);
+export const fetchLatestProducts = async () => mockDal.getLatest();
+export const fetchBestSellers = async () => mockDal.getBestSellers();
 export const fetchProductsPaginated = async (page = 0, pageSize = 6, filters = {}, cursor = null) => {
-    const resolvedFilters = resolveFilters(filters);
-    return await productRepository.getPaginated(resolvedFilters, page, pageSize, cursor);
+    return mockDal.getPaginated(filters, page, pageSize);
 };
-
-export const fetchRelatedProducts = async (id, limitCount = 12) => {
-    return await productRepository.getRelated(id, limitCount);
-};
-
-export const fetchProductsByIds = async (ids) => {
-    return await productRepository.getByIds(ids);
-};
-
-export const fetchAvailableBrandIds = async (categoryIds) => {
-    return await productRepository.getAvailableBrandIds(categoryIds);
-};
-
-export const subscribeToProducts = (callback) => {
-    return productRepository.subscribeToList({ usePayloadFormat: true }, callback);
-};
-
-export const fetchProductById = async (id) => {
-    return await productRepository.getById(id);
-};
+export const fetchRelatedProducts = async (id, limitCount = 12) => mockDal.getRelated(id, limitCount);
+export const fetchProductsByIds = async (ids) => mockDal.getByIds(ids);
+export const fetchAvailableBrandIds = async (categoryIds) => mockDal.getAvailableBrandIds(categoryIds);
+export const subscribeToProducts = (callback) => mockDal.subscribeToList({}, callback);
+export const fetchProductById = async (id) => mockDal.getById(id);
 
 export const subscribeToHero = (callback) => {
-    let isCancelled = false;
-
-    const fetchHeroLocalFirst = async () => {
-        try {
-            const { StorageEngine } = await import('../../../shared/storage/StorageEngine');
-            const { collection, getDocs } = await import('firebase/firestore');
-
-            const localHero = await StorageEngine.get('hero_data');
-            if (!isCancelled && localHero && Array.isArray(localHero) && localHero.length > 0) {
-                callback(localHero);
-            }
-
-            const snap = await getDocs(collection(db, 'hero'));
-            const serverHero = [];
-            snap.forEach(doc => serverHero.push({ id: doc.id, ...doc.data() }));
-
-            await StorageEngine.set('hero_data', serverHero);
-
-            if (!isCancelled) {
-                callback(serverHero);
-            }
-        } catch (error) {
-            console.error('[subscribeToHero] Background refresh failed:', error);
-            // DO NOT call callback([]) here, as it would erase the valid cache when offline.
-        }
-    };
-
-    fetchHeroLocalFirst();
-
-    let unsubscribeLifecycle;
-    import('../../../shared/startup/LifecycleCoordinator.js').then(({ lifecycleCoordinator }) => {
-        unsubscribeLifecycle = lifecycleCoordinator.subscribe(() => {
-            if (!isCancelled) fetchHeroLocalFirst();
-        });
-    });
-
-    return () => {
-        isCancelled = true;
-        if (unsubscribeLifecycle) unsubscribeLifecycle();
-    };
+    // Return empty array for hero or mock
+    callback([]);
+    return () => {};
 };
 
-// ==========================================
-// SWR SUBSCRIPTIONS
-// ==========================================
-
-export const subscribeToLatestSWR = (callback) => {
-    return productRepository.subscribeToLatestSWR(6, callback);
-};
-
-export const subscribeToBestSellersSWR = (callback) => {
-    return productRepository.subscribeToBestSellersSWR(6, callback);
-};
-
-export const subscribeToRelatedSWR = (id, callback, limitCount = 12) => {
-    return productRepository.subscribeToRelatedSWR(id, limitCount, callback);
-};
-
+export const subscribeToLatestSWR = (callback) => mockDal.subscribeToLatestSWR(6, callback);
+export const subscribeToBestSellersSWR = (callback) => mockDal.subscribeToBestSellersSWR(6, callback);
+export const subscribeToRelatedSWR = (id, callback, limitCount = 12) => mockDal.subscribeToRelatedSWR(id, limitCount, callback);
 export const subscribeToPaginatedSWR = (page = 0, pageSize = 6, filters = {}, cursor = null, callback) => {
-    const resolvedFilters = resolveFilters(filters);
-    return productRepository.subscribeToPaginatedSWR(resolvedFilters, page, pageSize, cursor, callback);
+    return mockDal.subscribeToPaginatedSWR(filters, page, pageSize, cursor, callback);
 };

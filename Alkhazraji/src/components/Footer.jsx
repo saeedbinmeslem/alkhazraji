@@ -40,16 +40,16 @@ export default function Footer() {
                 {/* Brand Section */}
                 <div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '20px' }}>
-                        <img src={logo} alt="متجر السعيدة" style={{ width: '64px', height: '64px', borderRadius: '50%', objectFit: 'cover' }} />
+                        <img src={logo} alt="متجر الخزرجي" style={{ width: '64px', height: '64px', borderRadius: '50%', objectFit: 'cover' }} />
                         <div>
                             <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 700, margin: 0 }}>
-                                <span style={{ color: 'var(--primary)' }}>السعيدة</span>
+                                <span style={{ color: 'var(--primary)' }}>الخزرجي</span>
                             </h2>
-                            <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.7rem', letterSpacing: '1.5px', color: 'var(--text-dim)', margin: 0, textTransform: 'uppercase' }}>Luxury Watch Store</p>
+                            <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.7rem', letterSpacing: '1.5px', color: 'var(--text-dim)', margin: 0, textTransform: 'uppercase' }}>Luxury poultry supplies store</p>
                         </div>
                     </div>
                     <p style={{ color: 'var(--text-dim)', lineHeight: '1.9', fontSize: '0.9rem', maxWidth: '260px' }}>
-                        نحن نؤمن أن الساعة ليست مجرد أداة لمعرفة الوقت، بل هي قطعة فنية تعبر عن شخصيتك وفخامتك.
+                        دليلك لصناعة مشروعك الدواجني. توفير انواع فقاسات البيض وتوفير انواع حضانات الطيور وتوفير مستلزمات الدواجن.
                     </p>
                 </div>
 
@@ -92,15 +92,15 @@ export default function Footer() {
                     <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '14px' }}>
                         <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', color: 'var(--text-dim)', fontSize: '0.88rem' }}>
                             <Phone size={17} color="var(--primary)" style={{ flexShrink: 0, marginTop: '2px' }} />
-                            <span dir="ltr" style={{ lineHeight: '1.7' }}>+967 772 754 414<br />+967 775 055 319</span>
+                            <span dir="ltr" style={{ lineHeight: '1.7' }}>+967 772 503 986</span>
                         </li>
                         <li style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'var(--text-dim)', fontSize: '0.88rem' }}>
                             <Mail size={17} color="var(--primary)" style={{ flexShrink: 0 }} />
-                            <span>alsaeedah8@gmail.com</span>
+                            <span>Alkhazraji8@gmail.com</span>
                         </li>
                         <li style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'var(--text-dim)', fontSize: '0.88rem' }}>
                             <MapPin size={17} color="var(--primary)" style={{ flexShrink: 0 }} />
-                            <span>حضرموت / المكلا / الشرج</span>
+                            <span>اليمن / حضرموت / تريم</span>
                         </li>
                     </ul>
 
@@ -123,7 +123,7 @@ export default function Footer() {
             {/* Bottom Bar */}
             <div style={{ borderTop: '1px solid var(--glass-border)', paddingTop: '20px', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '12px' }}>
                 <p style={{ color: 'var(--text-dim)', fontSize: '0.82rem', margin: 0, fontFamily: 'var(--font-body)' }}>
-                    © 2026 متجر السعيدة — جميع الحقوق محفوظة
+                    © 2026 متجر الخزرجي — جميع الحقوق محفوظة
                 </p>
                 <div style={{ display: 'flex', gap: '16px' }}>
                     {[

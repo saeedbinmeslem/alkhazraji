@@ -8,8 +8,8 @@ export default function CategoryPage() {
     const { slugId } = useParams();
     const store = useTaxonomyStore();
 
-    // The slugId could be just an ID (e.g., 'abc123') or a slugified name (e.g., 'men-watches-abc123')
-    // Or it might be one of our legacy redirects: 'men-watches', 'women-watches', 'children-watches'
+    // The slugId could be just an ID (e.g., 'abc123') or a slugified name (e.g., 'men-supplies-abc123')
+    // Or it might be one of our legacy redirects: 'men-supplies', 'women-supplies', 'children-supplies'
     
     if ((store.status === 'loading' || store.status === 'idle') && store.categories.length === 0) {
         return (
@@ -62,16 +62,16 @@ export default function CategoryPage() {
 
     // 4. Legacy Redirect Compatibility (for hardcoded slugs that didn't have an ID)
     if (!matchedCategory) {
-        if (slugId === 'men-watches') {
+        if (slugId === 'men-supplies') {
             // Find a category named 'رجالي' or similar, or fallback to all
             matchedCategory = store.categories.find(c => c.name.includes('رجال') || c.name.includes('Men'));
             if (!matchedCategory) return <ProductList initialCategory="all" />;
             needsCanonicalRedirect = true;
-        } else if (slugId === 'women-watches') {
+        } else if (slugId === 'women-supplies') {
             matchedCategory = store.categories.find(c => c.name.includes('نساء') || c.name.includes('Women'));
             if (!matchedCategory) return <ProductList initialCategory="all" />;
             needsCanonicalRedirect = true;
-        } else if (slugId === 'children-watches') {
+        } else if (slugId === 'children-supplies') {
             matchedCategory = store.categories.find(c => c.name.includes('أطفال') || c.name.includes('Kids') || c.name.includes('Children'));
             if (!matchedCategory) return <ProductList initialCategory="all" />;
             needsCanonicalRedirect = true;

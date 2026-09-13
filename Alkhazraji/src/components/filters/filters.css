@@ -175,7 +175,7 @@
 }
 
 .clear-filters-btn:hover {
-    background: rgba(212,175,55,0.05);
+    background: rgba(var(--primary-rgb),0.05);
     border-color: var(--primary);
     color: var(--primary);
 }
@@ -243,7 +243,7 @@
 .sort-item.active {
     color: var(--primary);
     font-weight: 700;
-    background: rgba(212,175,55,0.05);
+    background: rgba(var(--primary-rgb),0.05);
 }
 
 /* Mobile Filter Drawer Base */

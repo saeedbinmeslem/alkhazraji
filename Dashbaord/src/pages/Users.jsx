@@ -48,7 +48,7 @@ const AddUserModal = ({ onClose, onSuccess }) => {
 
             const secondaryApp = initializeApp(firebaseConfig, 'SecondaryUserApp');
             const secondaryAuth = getAuth(secondaryApp);
-            const dummyEmail = `${formData.phone.trim()}@alsaeedah.store`;
+            const dummyEmail = `${formData.phone.trim()}@Alkhazraji.store`;
             
             const userCredential = await createUserWithEmailAndPassword(secondaryAuth, dummyEmail, formData.password);
             
@@ -71,7 +71,7 @@ const AddUserModal = ({ onClose, onSuccess }) => {
                 text: `تم إنشاء حساب "${formData.name}" بنجاح.`,
                 background: '#141414',
                 color: '#fff',
-                confirmButtonColor: '#d4af37'
+                confirmButtonColor: 'var(--primary)'
             });
         } catch (err) {
             console.error('Create user error:', err);
@@ -125,7 +125,7 @@ const AddUserModal = ({ onClose, onSuccess }) => {
                             <div className="modern-field-group">
                                 <label className="modern-field-label">الاسم الكامل *</label>
                                 <div className="modern-input-container">
-                                    <User size={16} className="modern-input-icon" color="rgba(212,175,55,0.4)" />
+                                    <User size={16} className="modern-input-icon" color="rgba(var(--primary-rgb),0.4)" />
                                     <input
                                         id="add-user-name"
                                         type="text"
@@ -144,7 +144,7 @@ const AddUserModal = ({ onClose, onSuccess }) => {
                             <div className="modern-field-group">
                                 <label className="modern-field-label">رقم الهاتف *</label>
                                 <div className="modern-input-container">
-                                    <Phone size={16} className="modern-input-icon" color="rgba(212,175,55,0.4)" />
+                                    <Phone size={16} className="modern-input-icon" color="rgba(var(--primary-rgb),0.4)" />
                                     <input
                                         id="add-user-phone"
                                         type="tel"
@@ -166,7 +166,7 @@ const AddUserModal = ({ onClose, onSuccess }) => {
                             <div className="modern-field-group">
                                 <label className="modern-field-label">كلمة المرور *</label>
                                 <div className="modern-input-container">
-                                    <Lock size={16} className="modern-input-icon" color="rgba(212,175,55,0.4)" />
+                                    <Lock size={16} className="modern-input-icon" color="rgba(var(--primary-rgb),0.4)" />
                                     <input
                                         id="add-user-password"
                                         type={showPassword ? 'text' : 'password'}
@@ -188,7 +188,7 @@ const AddUserModal = ({ onClose, onSuccess }) => {
                             <div className="modern-field-group">
                                 <label className="modern-field-label">
                                     <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                                        <Store size={14} color="rgba(212,175,55,0.6)" /> اسم المتجر / صاحب المتجر
+                                        <Store size={14} color="rgba(var(--primary-rgb),0.6)" /> اسم المتجر / صاحب المتجر
                                         <span style={{ color: 'rgba(255,255,255,0.25)', fontSize: '0.75rem', fontWeight: 'normal', marginRight: '4px' }}>(اختياري)</span>
                                     </span>
                                 </label>
@@ -210,8 +210,8 @@ const AddUserModal = ({ onClose, onSuccess }) => {
                         <div className="modern-modal-form-column">
                             <div style={{
                                 flex: 1,
-                                background: 'rgba(212,175,55,0.04)',
-                                border: '1px solid rgba(212,175,55,0.12)',
+                                background: 'rgba(var(--primary-rgb),0.04)',
+                                border: '1px solid rgba(var(--primary-rgb),0.12)',
                                 borderRadius: '16px',
                                 padding: '20px',
                                 display: 'flex',
@@ -309,8 +309,8 @@ const UserCard = ({ user, index, onDelete, lastUserRef, isMobile }) => {
             <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? '10px' : '16px' }}>
                 <div style={{
                     width: isMobile ? '52px' : '64px', height: isMobile ? '52px' : '64px',
-                    borderRadius: '14px', background: 'rgba(212,175,55,0.08)',
-                    border: '1.5px solid rgba(212,175,55,0.2)',
+                    borderRadius: '14px', background: 'rgba(var(--primary-rgb),0.08)',
+                    border: '1.5px solid rgba(var(--primary-rgb),0.2)',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                     overflow: 'hidden', flexShrink: 0
                 }}>
@@ -338,12 +338,12 @@ const UserCard = ({ user, index, onDelete, lastUserRef, isMobile }) => {
             {/* Info Grid */}
             <div style={{ display: 'grid', gap: '9px', background: 'rgba(0,0,0,0.15)', padding: isMobile ? '12px' : '16px', borderRadius: '14px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '9px', color: '#fff', fontSize: isMobile ? '0.8rem' : '0.92rem' }}>
-                    <Phone size={14} color="rgba(212,175,55,0.7)" />
+                    <Phone size={14} color="rgba(var(--primary-rgb),0.7)" />
                     <span dir="ltr" style={{ opacity: 0.85 }}>{user.phone || '---'}</span>
                 </div>
                 {user.store_owner_info && (
                     <div style={{ display: 'flex', alignItems: 'center', gap: '9px', color: '#fff', fontSize: isMobile ? '0.8rem' : '0.92rem' }}>
-                        <Store size={14} color="rgba(212,175,55,0.7)" />
+                        <Store size={14} color="rgba(var(--primary-rgb),0.7)" />
                         <span style={{ opacity: 0.85 }}>{user.store_owner_info}</span>
                     </div>
                 )}
@@ -593,7 +593,7 @@ const Users = () => {
                     <motion.div
                         initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }}
                         style={{
-                            background: 'rgba(212,175,55,0.05)', border: '1px solid rgba(212,175,55,0.15)',
+                            background: 'rgba(var(--primary-rgb),0.05)', border: '1px solid rgba(var(--primary-rgb),0.15)',
                             padding: isMobile ? '10px 18px' : '14px 26px', borderRadius: '16px',
                             display: 'flex', alignItems: 'center', gap: '14px', backdropFilter: 'blur(10px)'
                         }}
@@ -636,12 +636,12 @@ const Users = () => {
                         onClick={() => setShowAddModal(true)}
                         style={{
                             display: 'flex', alignItems: 'center', gap: '8px',
-                            background: 'linear-gradient(135deg, #d4af37 0%, #b8860b 100%)',
+                            background: 'linear-gradient(135deg, var(--primary) 0%, var(--primary) 100%)',
                             border: 'none', color: '#000', fontWeight: '900',
                             fontSize: isMobile ? '0.85rem' : '0.95rem',
                             padding: isMobile ? '10px 16px' : '13px 22px', borderRadius: '14px',
                             cursor: 'pointer', fontFamily: "'Cairo', sans-serif",
-                            boxShadow: '0 8px 24px rgba(212,175,55,0.3)',
+                            boxShadow: '0 8px 24px rgba(var(--primary-rgb),0.3)',
                             whiteSpace: 'nowrap'
                         }}
                     >

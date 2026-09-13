@@ -179,7 +179,7 @@ export default function HeroCarousel() {
                             textAlign: 'center',
                             width: '100%'
                         }}>
-                            متجر <span style={{ color: 'var(--primary)', fontWeight: '600' }}>السعيدة</span>
+                            متجر <span style={{ color: 'var(--primary)', fontWeight: '600' }}>الخزرجي</span>
                         </h2>
                     </div>
 
@@ -345,7 +345,7 @@ export default function HeroCarousel() {
                                                         document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' });
                                                     }}
                                                     style={{
-                                                    background: 'linear-gradient(135deg, var(--primary) 0%, #b8860b 100%)',
+                                                    background: 'linear-gradient(135deg, var(--primary) 0%, var(--primary) 100%)',
                                                         color: 'var(--btn-text)',
                                                         border: 'none',
                                                         padding: '16px 40px',
@@ -363,7 +363,7 @@ export default function HeroCarousel() {
                                                     }}
                                                     onMouseEnter={(e) => {
                                                         e.currentTarget.style.transform = 'scale(1.05)';
-                                                        e.currentTarget.style.boxShadow = '0 0 25px rgba(212, 175, 55, 0.4)';
+                                                        e.currentTarget.style.boxShadow = '0 0 25px rgba(var(--primary-rgb), 0.4)';
                                                     }}
                                                     onMouseLeave={(e) => {
                                                         e.currentTarget.style.transform = 'scale(1)';

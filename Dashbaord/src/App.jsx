@@ -17,67 +17,23 @@ import Settings from './pages/Settings';
 import Taxonomy from './pages/Taxonomy';
 import Managers from './pages/Managers';
 import Unauthorized from './pages/Unauthorized';
-
-import { StartupProvider } from '@shared/startup/StartupProvider';
-import { auth, db } from './firebase/config';
 import useAuthStore from './store/useAuthStore';
-import { clearCachedSession } from '@shared/startup/cache';
 import { initTaxonomyStore } from './services/taxonomyService';
 
 function App() {
   useEffect(() => {
     initTaxonomyStore().catch(err => console.error('[App] taxonomy init failed:', err));
-  }, []);
-
-  // Memoize callbacks so StartupProvider's auth listener never re-subscribes
-  // unnecessarily due to inline function identity changes on re-renders.
-  const handleSessionResolved = useCallback((session) => {
-    if (!session) {
-      useAuthStore.getState().setSession(null);
+    
+    // Simulate auto-login for static environment
+    const authStore = useAuthStore.getState();
+    if (authStore.authState === 'INITIALIZING') {
+        const mockUser = { uid: 'admin-1', email: 'admin@local', name: 'Admin', role: 'super_admin', permissions: {} };
+        authStore.setSession(mockUser);
     }
-    // For Dashboard, we do not call setSession(session) here if it exists.
-    // This prevents a stale cached session from granting permissions before
-    // the background validation (authSync) confirms them against Firestore.
-    // ProtectedRoute will remain in the "loading" state until onSessionUpdated is called.
-  }, []);
-
-  const handleAuthSyncStart = useCallback(() => {
-    const currentState = useAuthStore.getState().authState;
-    // Only show the loading screen if we aren't already fully loaded
-    if (currentState !== 'READY') {
-      useAuthStore.getState().setAuthState('RESOLVING_AUTHORIZATION');
-    }
-  }, []);
-
-  const handleSessionUpdated = useCallback((session) => {
-    useAuthStore.getState().setSession(session);
-  }, []);
-
-  const handleAuthSyncError = useCallback((error) => {
-    const currentState = useAuthStore.getState().authState;
-    if (currentState !== 'READY') {
-      useAuthStore.getState().setAuthError(error);
-    } else {
-      console.warn('[App] Background validation error (ignoring to keep current session):', error);
-    }
-  }, []);
-
-  const handleForceLogout = useCallback(() => {
-    useAuthStore.getState().setSession(null);
-    clearCachedSession();
   }, []);
 
   return (
-    <StartupProvider
-        auth={auth}
-        db={db}
-        appName="dashboard"
-        onSessionResolved={handleSessionResolved}
-        onSessionUpdated={handleSessionUpdated}
-        onForceLogout={handleForceLogout}
-        onAuthSyncStart={handleAuthSyncStart}
-        onAuthSyncError={handleAuthSyncError}
-    >
+    <div className="startup-mock-provider" style={{width: '100%', height: '100%'}}>
       <LoadingProvider>
         <TopProgressBar />
         <Routes>
@@ -111,7 +67,7 @@ function App() {
           />
         </Routes>
       </LoadingProvider>
-    </StartupProvider>
+    </div>
   );
 }
 

@@ -46,12 +46,12 @@ export default function DesktopNavigation() {
             >
                 <motion.img 
                     src={logo} 
-                    alt="متجر السعيدة" 
+                    alt="متجر الخزرجي" 
                     style={{ 
                         width: 'clamp(44px, 4vw, 58px)', 
                         height: 'clamp(44px, 4vw, 58px)', 
                         objectFit: 'cover',
-                        filter: 'drop-shadow(0 2px 4px rgba(212,175,55,0.2))'
+                        filter: 'drop-shadow(0 2px 4px rgba(var(--primary-rgb),0.2))'
                     }} 
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: 'spring', stiffness: 300 }}
@@ -66,7 +66,7 @@ export default function DesktopNavigation() {
                     whiteSpace: 'nowrap',
                     textShadow: theme === 'dark' ? '0 2px 8px rgba(0,0,0,0.5)' : 'none'
                 }}>
-                    متجر السعيدة
+                    متجر الخزرجي
                 </h1>
             </div>
 
@@ -135,16 +135,16 @@ export default function DesktopNavigation() {
                         height: '54px',
                         borderRadius: '50%',
                         color: 'var(--primary)', 
-                        background: theme === 'dark' ? 'rgba(212,175,55,0.05)' : 'rgba(212,175,55,0.08)',
-                        border: '1px solid rgba(212,175,55,0.2)',
+                        background: theme === 'dark' ? 'rgba(var(--primary-rgb),0.05)' : 'rgba(var(--primary-rgb),0.08)',
+                        border: '1px solid rgba(var(--primary-rgb),0.2)',
                         transition: 'all 0.3s ease',
                         marginLeft: '8px'
                     }}
                     onClick={openCart}
                     title="السلة"
                     whileHover={{ 
-                        backgroundColor: 'rgba(212,175,55,0.15)',
-                        borderColor: 'rgba(212,175,55,0.5)',
+                        backgroundColor: 'rgba(var(--primary-rgb),0.15)',
+                        borderColor: 'rgba(var(--primary-rgb),0.5)',
                         scale: 1.05
                     }}
                     whileTap={{ scale: 0.95 }}
@@ -178,14 +178,14 @@ function ActionIcon({ icon, onClick, title, badge }) {
                 height: '46px',
                 borderRadius: '50%',
                 background: theme === 'dark' ? 'rgba(25,25,25,0.85)' : 'rgba(255,255,255,0.9)',
-                border: '1px solid rgba(212,175,55,0.3)',
+                border: '1px solid rgba(var(--primary-rgb),0.3)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 color: 'var(--primary)',
                 cursor: 'pointer',
                 backdropFilter: 'blur(10px)',
                 WebkitBackdropFilter: 'blur(10px)',
             }}
-            whileHover={{ scale: 1.1, backgroundColor: 'rgba(212,175,55,0.1)' }}
+            whileHover={{ scale: 1.1, backgroundColor: 'rgba(var(--primary-rgb),0.1)' }}
             whileTap={{ scale: 0.95 }}
         >
             {icon}
@@ -257,12 +257,12 @@ function DesktopSearch() {
                     display: 'flex',
                     alignItems: 'center',
                     background: theme === 'dark' ? 'rgba(25,25,25,0.95)' : 'rgba(255,255,255,1)',
-                    border: isFocused ? '1px solid var(--primary)' : '1px solid rgba(212,175,55,0.4)',
+                    border: isFocused ? '1px solid var(--primary)' : '1px solid rgba(var(--primary-rgb),0.4)',
                     borderRadius: '24px',
                     padding: '6px 16px',
                     width: isFocused ? 'clamp(220px, 25vw, 320px)' : 'clamp(160px, 15vw, 240px)',
                     transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                    boxShadow: isFocused ? '0 4px 15px rgba(212,175,55,0.2)' : '0 2px 8px rgba(0,0,0,0.05)'
+                    boxShadow: isFocused ? '0 4px 15px rgba(var(--primary-rgb),0.2)' : '0 2px 8px rgba(0,0,0,0.05)'
                 }}
             >
                 <button type="submit" style={{ background: 'none', border: 'none', color: 'var(--primary)', cursor: 'pointer', padding: '4px', display: 'flex', alignItems: 'center' }}>

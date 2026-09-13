@@ -27,12 +27,12 @@ export default function AnimatedLoader({ isOpen, message }) {
                     width: '80px',
                     height: '80px',
                     borderRadius: '50%',
-                    border: '3px solid rgba(212, 175, 55, 0.2)', // Dimmed gold border
+                    border: '3px solid rgba(var(--primary-rgb), 0.2)', // Dimmed gold border
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
                     marginBottom: '24px',
-                    boxShadow: '0 0 30px rgba(212, 175, 55, 0.15)'
+                    boxShadow: '0 0 30px rgba(var(--primary-rgb), 0.15)'
                 }}>
                     {/* Pulsing glow */}
                     <motion.div
@@ -43,7 +43,7 @@ export default function AnimatedLoader({ isOpen, message }) {
                             width: '100%',
                             height: '100%',
                             borderRadius: '50%',
-                            background: 'radial-gradient(circle, rgba(212,175,55,0.2) 0%, rgba(0,0,0,0) 70%)'
+                            background: 'radial-gradient(circle, rgba(var(--primary-rgb),0.2) 0%, rgba(0,0,0,0) 70%)'
                         }}
                     />
 

@@ -102,7 +102,7 @@ export default function PullToRefresh({ onRefresh, children, disabled = false })
                 : 'rgba(20, 20, 20, 0.95)';
             circleRef.current.style.color = isReady ? '#000' : 'var(--primary)';
             circleRef.current.style.boxShadow = isReady
-                ? '0 0 25px rgba(212, 175, 55, 0.5)'
+                ? '0 0 25px rgba(var(--primary-rgb), 0.5)'
                 : '0 10px 25px rgba(0,0,0,0.6)';
         }
 
@@ -498,7 +498,7 @@ export default function PullToRefresh({ onRefresh, children, disabled = false })
                         height:         50,
                         borderRadius:   '50%',
                         background:     'rgba(20, 20, 20, 0.95)',
-                        border:         '1px solid rgba(212, 175, 55, 0.3)',
+                        border:         '1px solid rgba(var(--primary-rgb), 0.3)',
                         boxShadow:      '0 10px 25px rgba(0,0,0,0.6)',
                         display:        'flex',
                         alignItems:     'center',

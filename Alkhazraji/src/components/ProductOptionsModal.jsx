@@ -65,7 +65,7 @@ export default function ProductOptionsModal({ isOpen, onClose, product, onConfir
 
     const handleConfirm = () => {
         if (effectiveVariants.length > 0 && !selectedVariant) {
-            setError('يرجى اختيار شكل الساعة');
+            setError('يرجى اختيار شكل المنتج');
             return;
         }
 
@@ -79,7 +79,7 @@ export default function ProductOptionsModal({ isOpen, onClose, product, onConfir
 
     const handleAddAnother = () => {
         if (effectiveVariants.length > 0 && !selectedVariant) {
-            setError('يرجى اختيار شكل الساعة');
+            setError('يرجى اختيار شكل المنتج');
             return;
         }
 
@@ -303,7 +303,7 @@ export default function ProductOptionsModal({ isOpen, onClose, product, onConfir
                                         padding: '16px',
                                         fontSize: '1.1rem',
                                         borderRadius: '14px',
-                                        boxShadow: '0 8px 16px rgba(212, 175, 55, 0.2)'
+                                        boxShadow: '0 8px 16px rgba(var(--primary-rgb), 0.2)'
                                     }}
                                 >
                                     <ShoppingCart size={22} />

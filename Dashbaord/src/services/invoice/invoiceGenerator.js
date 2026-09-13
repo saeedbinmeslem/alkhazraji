@@ -66,12 +66,12 @@ export const generateInvoicePdf = async (order, paymentType, options = {}) => {
         const creditSelected = paymentType === 'credit';
 
         const headerHTML = `
-        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #d4af37; padding-bottom: 20px; margin-bottom: 20px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--primary); padding-bottom: 20px; margin-bottom: 20px;">
             <div style="flex: 1; text-align: right;">
-                <h1 style="color: #d4af37; font-size: 28px; margin: 0 0 10px 0; font-weight: 700;">متجر السعيدة</h1>
+                <h1 style="color: var(--primary); font-size: 28px; margin: 0 0 10px 0; font-weight: 700;">متجر الخزرجي</h1>
                 <div style="font-size: 13px; color: #444; line-height: 1.8;">
                      <p style="margin: 0;"><strong>تواصل : </strong> 772754414, 775055319</p>
-                     <p style="margin: 0;"><strong>الإيميل : </strong> alsaeedah8@gmail.com</p>
+                     <p style="margin: 0;"><strong>الإيميل : </strong> Alkhazraji8@gmail.com</p>
                      <p style="margin: 0; direction: ltr; text-align: right;"><strong>العنوان : </strong>حضرموت / المكلا / الشرج </p>
                 </div>
             </div>
@@ -80,7 +80,7 @@ export const generateInvoicePdf = async (order, paymentType, options = {}) => {
             </div>
             <div style="flex: 1; text-align: left; display: flex; flex-direction: column; justify-content: space-between; height: 100px;">
                 <div>
-                    <p style="margin: 0; font-size: 15px; color: #d4af37; font-weight: bold; font-style: italic;">"الفخامة ... في كل ثانية"</p>
+                    <p style="margin: 0; font-size: 15px; color: var(--primary); font-weight: bold; font-style: italic;">"الفخامة ... في كل ثانية"</p>
                     <p style="margin: 5px 0 0; color: #888; font-size: 11px;">نصنع التميز، لنهديه إليكم</p>
                 </div>
                 <div style="font-size: 12px; color: #666;">
@@ -94,15 +94,15 @@ export const generateInvoicePdf = async (order, paymentType, options = {}) => {
             <div style="display: inline-flex; align-items: center; border: 1.5px solid #e0d5b5; border-radius: 10px; padding: 8px 28px; gap: 0; background: #fff;">
                 <span style="font-size: 14px; font-weight: 700; color: #333; padding-inline-end: 16px;">نوع الدفع:</span>
                 <div style="display: flex; align-items: center; gap: 8px; padding-inline-end: 18px;">
-                    <div style="width: 18px; height: 18px; border-radius: 50%; border: 2px solid #d4af37; display: flex; align-items: center; justify-content: center; background: #fff;">
-                        ${cashSelected ? '<div style="width: 10px; height: 10px; border-radius: 50%; background: #d4af37;"></div>' : ''}
+                    <div style="width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--primary); display: flex; align-items: center; justify-content: center; background: #fff;">
+                        ${cashSelected ? '<div style="width: 10px; height: 10px; border-radius: 50%; background: var(--primary);"></div>' : ''}
                     </div>
                     <span style="font-size: 14px; font-weight: 600; color: #333;">نقد</span>
                 </div>
                 <div style="width: 1px; height: 20px; background: #e0d5b5;"></div>
                 <div style="display: flex; align-items: center; gap: 8px; padding-inline-start: 18px;">
-                    <div style="width: 18px; height: 18px; border-radius: 50%; border: 2px solid #d4af37; display: flex; align-items: center; justify-content: center; background: #fff;">
-                        ${creditSelected ? '<div style="width: 10px; height: 10px; border-radius: 50%; background: #d4af37;"></div>' : ''}
+                    <div style="width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--primary); display: flex; align-items: center; justify-content: center; background: #fff;">
+                        ${creditSelected ? '<div style="width: 10px; height: 10px; border-radius: 50%; background: var(--primary);"></div>' : ''}
                     </div>
                     <span style="font-size: 14px; font-weight: 600; color: #333;">أجل</span>
                 </div>
@@ -128,12 +128,12 @@ export const generateInvoicePdf = async (order, paymentType, options = {}) => {
         `;
 
         const tableHeaderHTML = `
-        <tr style="background: rgba(212, 175, 55, 0.1); color: #000;">
-            <th style="padding: 15px; text-align: right; border-bottom: 2px solid #d4af37;">رقم الموديل</th>
-            <th style="padding: 15px; text-align: right; border-bottom: 2px solid #d4af37;">المنتج</th>
-            <th style="padding: 15px; text-align: center; border-bottom: 2px solid #d4af37;">السعر</th>
-            <th style="padding: 15px; text-align: center; border-bottom: 2px solid #d4af37;">الكمية</th>
-            <th style="padding: 15px; text-align: left; border-bottom: 2px solid #d4af37;">الإجمالي</th>
+        <tr style="background: rgba(var(--primary-rgb), 0.1); color: #000;">
+            <th style="padding: 15px; text-align: right; border-bottom: 2px solid var(--primary);">رقم الموديل</th>
+            <th style="padding: 15px; text-align: right; border-bottom: 2px solid var(--primary);">المنتج</th>
+            <th style="padding: 15px; text-align: center; border-bottom: 2px solid var(--primary);">السعر</th>
+            <th style="padding: 15px; text-align: center; border-bottom: 2px solid var(--primary);">الكمية</th>
+            <th style="padding: 15px; text-align: left; border-bottom: 2px solid var(--primary);">الإجمالي</th>
         </tr>
         `;
 
@@ -142,19 +142,19 @@ export const generateInvoicePdf = async (order, paymentType, options = {}) => {
         <td style="padding: 15px; text-align: right; color: #000; font-weight: 600;">${item.name || item.title}</td>
         <td style="padding: 15px; text-align: center; color: #333;">${(item.price || 0).toLocaleString()} ر.س</td>
         <td style="padding: 15px; text-align: center; color: #333;">${item.dp_qty || item.quantity || 1}</td>
-        <td style="padding: 15px; text-align: left; color: #d4af37; font-weight: bold;">${((item.price || 0) * (item.dp_qty || item.quantity || 1)).toLocaleString()} ر.س</td>
+        <td style="padding: 15px; text-align: left; color: var(--primary); font-weight: bold;">${((item.price || 0) * (item.dp_qty || item.quantity || 1)).toLocaleString()} ر.س</td>
         `;
 
         const footerHTML = `
         <div style="display: flex; flex-direction: column; align-items: flex-start; margin-top: 30px; padding: 20px; background: #fcfcfc; border: 1px solid #eee; border-radius: 8px;">
             <div style="width: 100%; display: flex; justify-content: space-between; font-size: 22px; font-weight: bold;">
                 <span style="color: #000;">الإجمالي الكلي:</span>
-                <span style="color: #d4af37;">${order.total_amount.toLocaleString()} ر.س</span>
+                <span style="color: var(--primary);">${order.total_amount.toLocaleString()} ر.س</span>
             </div>
         </div>
 
         <div style="margin-top: 60px; text-align: center; color: #888; font-size: 13px;">
-            <p style="margin-bottom: 5px;">نشكركم على اختياركم متجر السعيدة - الفخامة في كل ثانية</p>
+            <p style="margin-bottom: 5px;">نشكركم على اختياركم متجر الخزرجي - الفخامة في كل ثانية</p>
         </div>
         `;
 

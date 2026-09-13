@@ -244,9 +244,9 @@ export default function ProductList({
                     color: 'var(--text-main)',
                     marginBottom: '15px',
                     fontWeight: '800',
-                    textShadow: '0 4px 20px rgba(212, 175, 55, 0.2)'
+                    textShadow: '0 4px 20px rgba(var(--primary-rgb), 0.2)'
                 }}>
-                    {title} <span style={{ color: 'var(--primary)', textShadow: '0 0 30px rgba(212, 175, 55, 0.4)' }}>{subtitle}</span>
+                    {title} <span style={{ color: 'var(--primary)', textShadow: '0 0 30px rgba(var(--primary-rgb), 0.4)' }}>{subtitle}</span>
                 </h2>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '1.25rem', fontWeight: '500', maxWidth: '600px', margin: '0 auto' }}>
                     {description}
@@ -364,7 +364,7 @@ export default function ProductList({
                                                 fontSize: '1rem',
                                                 transition: 'all 0.3s ease'
                                             }}
-                                            onMouseEnter={(e) => { e.target.style.background = 'rgba(212,175,55,0.1)'; }}
+                                            onMouseEnter={(e) => { e.target.style.background = 'rgba(var(--primary-rgb),0.1)'; }}
                                             onMouseLeave={(e) => { e.target.style.background = 'transparent'; }}
                                         >
                                             إعادة تعيين الفلاتر

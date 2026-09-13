@@ -58,7 +58,7 @@ export default function MobileNavigation() {
                                 onClick={handleLogoClick}
                             >
                                 <motion.img 
-                                    src={logo} alt="متجر السعيدة" 
+                                    src={logo} alt="متجر الخزرجي" 
                                     style={{ width: '42px', height: '42px', objectFit: 'cover' }} 
                                     whileHover={{ scale: 1.05 }}
                                 />
@@ -66,7 +66,7 @@ export default function MobileNavigation() {
                                     fontSize: 'clamp(1.05rem, 4vw, 1.25rem)', fontWeight: '800', margin: 0, 
                                     fontFamily: 'var(--font-heading)', color: 'var(--primary)', whiteSpace: 'nowrap'
                                 }}>
-                                    متجر السعيدة
+                                    متجر الخزرجي
                                 </h1>
                             </div>
 

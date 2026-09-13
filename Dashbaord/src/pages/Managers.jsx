@@ -104,7 +104,7 @@ const AddManagerModal = ({ onClose, onSuccess }) => {
                 text: `تم إنشاء حساب "${formData.name}" بنجاح.`,
                 background: '#141414',
                 color: '#fff',
-                confirmButtonColor: '#d4af37'
+                confirmButtonColor: 'var(--primary)'
             });
             onSuccess();
             onClose();
@@ -157,7 +157,7 @@ const AddManagerModal = ({ onClose, onSuccess }) => {
                             <div className="modern-field-group">
                                 <label className="modern-field-label">الاسم الكامل *</label>
                                 <div className="modern-input-container">
-                                    <User size={16} className="modern-input-icon" color="rgba(212,175,55,0.4)" />
+                                    <User size={16} className="modern-input-icon" color="rgba(var(--primary-rgb),0.4)" />
                                     <input
                                         type="text"
                                         name="name"
@@ -175,13 +175,13 @@ const AddManagerModal = ({ onClose, onSuccess }) => {
                             <div className="modern-field-group">
                                 <label className="modern-field-label">البريد الإلكتروني *</label>
                                 <div className="modern-input-container">
-                                    <Mail size={16} className="modern-input-icon" color="rgba(212,175,55,0.4)" />
+                                    <Mail size={16} className="modern-input-icon" color="rgba(var(--primary-rgb),0.4)" />
                                     <input
                                         type="email"
                                         name="email"
                                         value={formData.email}
                                         onChange={handleChange}
-                                        placeholder="manager@alsaeedah.store"
+                                        placeholder="manager@Alkhazraji.store"
                                         required
                                         className="modern-input-field"
                                         style={{ paddingRight: '44px' }}
@@ -194,7 +194,7 @@ const AddManagerModal = ({ onClose, onSuccess }) => {
                                 <div className="modern-field-group">
                                     <label className="modern-field-label">كلمة المرور *</label>
                                     <div className="modern-input-container">
-                                        <Lock size={16} className="modern-input-icon" color="rgba(212,175,55,0.4)" />
+                                        <Lock size={16} className="modern-input-icon" color="rgba(var(--primary-rgb),0.4)" />
                                         <input
                                             type={showPassword ? 'text' : 'password'}
                                             name="password"
@@ -210,7 +210,7 @@ const AddManagerModal = ({ onClose, onSuccess }) => {
                                 <div className="modern-field-group">
                                     <label className="modern-field-label">تأكيد كلمة المرور *</label>
                                     <div className="modern-input-container">
-                                        <Lock size={16} className="modern-input-icon" color="rgba(212,175,55,0.4)" />
+                                        <Lock size={16} className="modern-input-icon" color="rgba(var(--primary-rgb),0.4)" />
                                         <input
                                             type={showPassword ? 'text' : 'password'}
                                             name="confirmPassword"
@@ -374,7 +374,7 @@ const EditManagerModal = ({ manager, onClose, onSuccess }) => {
                 text: 'تم تحديث بيانات المدير بنجاح.',
                 background: '#141414',
                 color: '#fff',
-                confirmButtonColor: '#d4af37'
+                confirmButtonColor: 'var(--primary)'
             });
             onSuccess();
             onClose();
@@ -427,7 +427,7 @@ const EditManagerModal = ({ manager, onClose, onSuccess }) => {
                             <div className="modern-field-group">
                                 <label className="modern-field-label">الاسم الكامل *</label>
                                 <div className="modern-input-container">
-                                    <User size={16} className="modern-input-icon" color="rgba(212,175,55,0.4)" />
+                                    <User size={16} className="modern-input-icon" color="rgba(var(--primary-rgb),0.4)" />
                                     <input
                                         type="text"
                                         name="name"
@@ -445,13 +445,13 @@ const EditManagerModal = ({ manager, onClose, onSuccess }) => {
                             <div className="modern-field-group">
                                 <label className="modern-field-label">البريد الإلكتروني *</label>
                                 <div className="modern-input-container">
-                                    <Mail size={16} className="modern-input-icon" color="rgba(212,175,55,0.4)" />
+                                    <Mail size={16} className="modern-input-icon" color="rgba(var(--primary-rgb),0.4)" />
                                     <input
                                         type="email"
                                         name="email"
                                         value={formData.email}
                                         onChange={handleChange}
-                                        placeholder="manager@alsaeedah.store"
+                                        placeholder="manager@Alkhazraji.store"
                                         required
                                         className="modern-input-field"
                                         style={{ paddingRight: '44px' }}
@@ -462,8 +462,8 @@ const EditManagerModal = ({ manager, onClose, onSuccess }) => {
                             {/* Password Section */}
                             <div style={{
                                 padding: '14px', borderRadius: '14px',
-                                background: 'rgba(212,175,55,0.03)',
-                                border: '1px solid rgba(212,175,55,0.1)'
+                                background: 'rgba(var(--primary-rgb),0.03)',
+                                border: '1px solid rgba(var(--primary-rgb),0.1)'
                             }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--primary)', fontSize: '0.75rem', fontWeight: '800', marginBottom: '10px' }}>
                                     <Key size={12} />
@@ -473,7 +473,7 @@ const EditManagerModal = ({ manager, onClose, onSuccess }) => {
                                     <div className="modern-field-group">
                                         <label className="modern-field-label" style={{ fontSize: '0.75rem' }}>كلمة المرور الجديدة</label>
                                         <div className="modern-input-container">
-                                            <Lock size={15} className="modern-input-icon" color="rgba(212,175,55,0.4)" />
+                                            <Lock size={15} className="modern-input-icon" color="rgba(var(--primary-rgb),0.4)" />
                                             <input
                                                 type={showPassword ? 'text' : 'password'}
                                                 name="password"
@@ -488,7 +488,7 @@ const EditManagerModal = ({ manager, onClose, onSuccess }) => {
                                     <div className="modern-field-group">
                                         <label className="modern-field-label" style={{ fontSize: '0.75rem' }}>تأكيد كلمة المرور</label>
                                         <div className="modern-input-container">
-                                            <Lock size={15} className="modern-input-icon" color="rgba(212,175,55,0.4)" />
+                                            <Lock size={15} className="modern-input-icon" color="rgba(var(--primary-rgb),0.4)" />
                                             <input
                                                 type={showPassword ? 'text' : 'password'}
                                                 name="confirmPassword"
@@ -608,7 +608,7 @@ const ManagerCard = ({ manager, index, isMobile, onEdit, onDelete, onToggleActiv
     // Build perm list
     const permList = [];
     if (isSuper) {
-        permList.push({ name: 'المدير العام', color: '#d4af37', bg: 'rgba(212,175,55,0.12)', border: 'rgba(212,175,55,0.3)' });
+        permList.push({ name: 'المدير العام', color: 'var(--primary)', bg: 'rgba(var(--primary-rgb),0.12)', border: 'rgba(var(--primary-rgb),0.3)' });
     } else {
         if (manager.permissions?.products) permList.push({ name: 'المنتجات', color: '#3b82f6', bg: 'rgba(59,130,246,0.12)', border: 'rgba(59,130,246,0.2)' });
         if (manager.permissions?.orders) permList.push({ name: 'الطلبات', color: '#a855f7', bg: 'rgba(168,85,247,0.12)', border: 'rgba(168,85,247,0.2)' });
@@ -617,11 +617,11 @@ const ManagerCard = ({ manager, index, isMobile, onEdit, onDelete, onToggleActiv
 
     // Colors: Gold/Blue for Super Admin, Dark/Translucent for managers
     const cardBg = isSuper 
-        ? 'linear-gradient(135deg, rgba(212,175,55,0.06) 0%, rgba(20,20,20,0.8) 100%)'
+        ? 'linear-gradient(135deg, rgba(var(--primary-rgb),0.06) 0%, rgba(20,20,20,0.8) 100%)'
         : 'rgba(255,255,255,0.02)';
     
     const cardBorder = isSuper
-        ? '1px solid rgba(212,175,55,0.3)'
+        ? '1px solid rgba(var(--primary-rgb),0.3)'
         : '1px solid rgba(255,255,255,0.07)';
 
     const activeLabelColor = manager.is_active !== false ? '#10b981' : '#ef4444';
@@ -641,15 +641,15 @@ const ManagerCard = ({ manager, index, isMobile, onEdit, onDelete, onToggleActiv
                 borderRadius: '22px', padding: isMobile ? '18px' : '26px',
                 display: 'flex', flexDirection: 'column', gap: isMobile ? '14px' : '20px',
                 backdropFilter: 'blur(10px)', position: 'relative',
-                boxShadow: isSuper ? '0 10px 30px rgba(212,175,55,0.05)' : 'none'
+                boxShadow: isSuper ? '0 10px 30px rgba(var(--primary-rgb),0.05)' : 'none'
             }}
         >
             {/* Active / Super Admin Badge */}
             <div style={{
                 position: 'absolute', top: '16px', left: '16px',
-                background: isSuper ? 'rgba(212,175,55,0.15)' : activeLabelBg,
-                border: `1px solid ${isSuper ? 'rgba(212,175,55,0.4)' : activeLabelBorder}`,
-                color: isSuper ? '#d4af37' : activeLabelColor,
+                background: isSuper ? 'rgba(var(--primary-rgb),0.15)' : activeLabelBg,
+                border: `1px solid ${isSuper ? 'rgba(var(--primary-rgb),0.4)' : activeLabelBorder}`,
+                color: isSuper ? 'var(--primary)' : activeLabelColor,
                 padding: '3px 10px', borderRadius: '20px', fontSize: '0.7rem', fontWeight: '800'
             }}>
                 {isSuper ? 'صلاحيات كاملة' : (manager.is_active !== false ? 'نشط' : 'معطّل')}
@@ -660,12 +660,12 @@ const ManagerCard = ({ manager, index, isMobile, onEdit, onDelete, onToggleActiv
                 <div style={{
                     width: isMobile ? '52px' : '64px', height: isMobile ? '52px' : '64px',
                     borderRadius: '14px', 
-                    background: isSuper ? 'rgba(212,175,55,0.12)' : 'rgba(255,255,255,0.04)',
-                    border: `1.5px solid ${isSuper ? '#d4af37' : 'rgba(255,255,255,0.1)'}`,
+                    background: isSuper ? 'rgba(var(--primary-rgb),0.12)' : 'rgba(255,255,255,0.04)',
+                    border: `1.5px solid ${isSuper ? 'var(--primary)' : 'rgba(255,255,255,0.1)'}`,
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                     flexShrink: 0
                 }}>
-                    <Shield size={isMobile ? 22 : 28} color={isSuper ? '#d4af37' : 'var(--primary)'} />
+                    <Shield size={isMobile ? 22 : 28} color={isSuper ? 'var(--primary)' : 'var(--primary)'} />
                 </div>
                 <div style={{ flex: 1, minWidth: 0 }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '3px' }}>
@@ -675,7 +675,7 @@ const ManagerCard = ({ manager, index, isMobile, onEdit, onDelete, onToggleActiv
                     </div>
                     
                     <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-                        <span style={{ fontSize: '0.68rem', color: isSuper ? '#d4af37' : 'var(--primary)', fontWeight: '800' }}>
+                        <span style={{ fontSize: '0.68rem', color: isSuper ? 'var(--primary)' : 'var(--primary)', fontWeight: '800' }}>
                             {isSuper ? 'المالك الأساسي' : `#MNG-${manager.id.substring(0, 5).toUpperCase()}`}
                         </span>
                     </div>
@@ -685,7 +685,7 @@ const ManagerCard = ({ manager, index, isMobile, onEdit, onDelete, onToggleActiv
             {/* Info Grid */}
             <div style={{ display: 'grid', gap: '10px', background: 'rgba(0,0,0,0.15)', padding: isMobile ? '12px' : '16px', borderRadius: '14px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '9px', color: '#fff', fontSize: isMobile ? '0.8rem' : '0.92rem' }}>
-                    <Mail size={14} color="rgba(212,175,55,0.7)" />
+                    <Mail size={14} color="rgba(var(--primary-rgb),0.7)" />
                     <span style={{ opacity: 0.85, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{manager.email}</span>
                 </div>
                 
@@ -894,7 +894,7 @@ const Managers = () => {
     const superAdminAccount = {
         id: 'super-admin',
         name: 'المدير العام (المالك)',
-        email: import.meta.env.VITE_ADMIN_EMAIL || 'alsaeedah8@gmail.com',
+        email: import.meta.env.VITE_ADMIN_EMAIL || 'Alkhazraji8@gmail.com',
         role: 'super_admin',
         is_active: true
     };
@@ -945,7 +945,7 @@ const Managers = () => {
                     <motion.div
                         initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }}
                         style={{
-                            background: 'rgba(212,175,55,0.05)', border: '1px solid rgba(212,175,55,0.15)',
+                            background: 'rgba(var(--primary-rgb),0.05)', border: '1px solid rgba(var(--primary-rgb),0.15)',
                             padding: isMobile ? '10px 18px' : '14px 26px', borderRadius: '16px',
                             display: 'flex', alignItems: 'center', gap: '14px', backdropFilter: 'blur(10px)'
                         }}
@@ -985,12 +985,12 @@ const Managers = () => {
                         onClick={() => setShowAddModal(true)}
                         style={{
                             display: 'flex', alignItems: 'center', gap: '8px',
-                            background: 'linear-gradient(135deg, #d4af37 0%, #b8860b 100%)',
+                            background: 'linear-gradient(135deg, var(--primary) 0%, var(--primary) 100%)',
                             border: 'none', color: '#000', fontWeight: '900',
                             fontSize: isMobile ? '0.85rem' : '0.95rem',
                             padding: isMobile ? '10px 16px' : '13px 22px', borderRadius: '14px',
                             cursor: 'pointer', fontFamily: "'Cairo', sans-serif",
-                            boxShadow: '0 8px 24px rgba(212,175,55,0.3)',
+                            boxShadow: '0 8px 24px rgba(var(--primary-rgb),0.3)',
                             whiteSpace: 'nowrap'
                         }}
                     >

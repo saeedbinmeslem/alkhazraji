@@ -26,7 +26,7 @@ export default function EmptyOrders({ isMobile }) {
         width: isMobile ? '80px' : '100px',
         height: isMobile ? '80px' : '100px',
         borderRadius: '50%',
-        background: 'linear-gradient(135deg, rgba(212,175,55,0.1), rgba(212,175,55,0.05))',
+        background: 'linear-gradient(135deg, rgba(var(--primary-rgb),0.1), rgba(var(--primary-rgb),0.05))',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center'

@@ -1,6 +1,6 @@
 {
   "appId": "com.alsaeedah.store",
-  "appName": "AL-SAEEDAH",
+  "appName": "الخزرجي",
   "webDir": "dist",
   "backgroundColor": "#0a0a0a",
   "plugins": {
@@ -21,7 +21,7 @@
     },
     "LocalNotifications": {
       "smallIcon": "ic_stat_logo",
-      "iconColor": "#D4AF37",
+      "iconColor": "#C62828",
       "sound": "default"
     }
   }

@@ -23,25 +23,25 @@ const db = getFirestore(app);
 const MANIFEST_PATH = path.join(__dirname, 'bulk_import_manifest.json');
 const TARGET_GLASSES = 70;
 const TARGET_WALLETS = 85;
-const TARGET_WATCHES = 100;
+const TARGET_supplies = 100;
 const TOTAL_TARGET = 255;
 
 // Taxonomies
 const CATEGORIES = {
     Glasses: 'In6tsq8ohDfiX3uSq3Nz',
     Wallets: '1zO8g6U6XxnDNfltO9pM',
-    Watches: 'XTdqaspJR7BG6GGxrYJk'
+    supplies: 'XTdqaspJR7BG6GGxrYJk'
 };
 
 const NEW_BRANDS = {
     Glasses: ['Ray-Ban', 'Oakley', 'Carrera', 'Polaroid', 'Vogue Eyewear', 'Persol', 'Armani Exchange'],
     Wallets: ['Fossil', 'Tommy Hilfiger', 'Calvin Klein', 'Guess', 'Levi\'s', 'Samsonite', 'Polo Ralph Lauren'],
-    Watches: ['Casio', 'Seiko', 'Citizen', 'Fossil Watch', 'Tissot', 'Timex', 'Orient', 'Swatch']
+    supplies: ['Casio', 'Seiko', 'Citizen', 'Fossil Watch', 'Tissot', 'Timex', 'Orient', 'Swatch']
 };
 
 const GENDERS = ['men', 'women', 'kids'];
 const COLORS = ['أسود', 'بني', 'فضي', 'ذهبي', 'أزرق', 'رمادي', 'أبيض', 'أحمر', 'وردي'];
-const MATERIALS_WATCHES = ['ستانلس ستيل', 'جلد طبيعي', 'سيليكون', 'تيتانيوم'];
+const MATERIALS_supplies = ['ستانلس ستيل', 'جلد طبيعي', 'سيليكون', 'تيتانيوم'];
 const MATERIALS_GLASSES = ['معدن', 'بلاستيك', 'أسيتات', 'تيتانيوم'];
 const MATERIALS_WALLETS = ['جلد طبيعي', 'جلد صناعي', 'قماش'];
 
@@ -63,7 +63,7 @@ const IMAGES = {
         'https://images.unsplash.com/photo-1628151015968-3a4429e9ef04?w=800&q=80',
         'https://images.unsplash.com/photo-1526362540608-4e8c14820713?w=800&q=80'
     ],
-    Watches: [
+    supplies: [
         'https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=800&q=80',
         'https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=800&q=80',
         'https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?w=800&q=80',
@@ -104,9 +104,9 @@ const generateProduct = (type, categoryId, brandMap, index) => {
         materials = [randEl(MATERIALS_WALLETS)];
     } else {
         const style = randEl(['Classic', 'Sport', 'Chronograph', 'Digital', 'Luxury']);
-        name = `${brandName} ساعة ${style}`;
-        description = `ساعة فاخرة من ${brandName} بتصميم ${style}. تتميز بدقة عالية ومقاومة للماء. الخيار الأمثل للارتداء اليومي أو المناسبات الرسمية. منتج تجريبي رقم ${index}.`;
-        materials = [randEl(MATERIALS_WATCHES)];
+        name = `${brandName} منتج ${style}`;
+        description = `منتج فاخر من ${brandName} بتصميم ${style}. تتميز بدقة عالية ومقاومة للماء. الخيار الأمثل للارتداء اليومي أو المناسبات الرسمية. منتج تجريبي رقم ${index}.`;
+        materials = [randEl(MATERIALS_supplies)];
     }
 
     const displayId = generateUniqueDisplayId(index);
@@ -209,9 +209,9 @@ async function run() {
         for (let i = 0; i < TARGET_WALLETS; i++) {
             products.push(generateProduct('Wallets', CATEGORIES.Wallets, brandMap, index++));
         }
-        // Watches
-        for (let i = 0; i < TARGET_WATCHES; i++) {
-            products.push(generateProduct('Watches', CATEGORIES.Watches, brandMap, index++));
+        // supplies
+        for (let i = 0; i < TARGET_supplies; i++) {
+            products.push(generateProduct('supplies', CATEGORIES.supplies, brandMap, index++));
         }
 
         if (products.length !== TOTAL_TARGET) {
@@ -250,7 +250,7 @@ async function run() {
         
         let finalGlasses = 0;
         let finalWallets = 0;
-        let finalWatches = 0;
+        let finalsupplies = 0;
         
         // Using chunks to verify since we have the importedProductIds
         // Fetching 10 at a time to be safe, or just checking the local products array logic.
@@ -261,13 +261,13 @@ async function run() {
             const data = doc.data();
             if (data.categoryId === CATEGORIES.Glasses) finalGlasses++;
             else if (data.categoryId === CATEGORIES.Wallets) finalWallets++;
-            else if (data.categoryId === CATEGORIES.Watches) finalWatches++;
+            else if (data.categoryId === CATEGORIES.supplies) finalsupplies++;
         });
 
         console.log(`\nTest Dataset Import Completed`);
         console.log(`Glasses: ${finalGlasses}`);
         console.log(`Wallets: ${finalWallets}`);
-        console.log(`Watches: ${finalWatches}`);
+        console.log(`supplies: ${finalsupplies}`);
         console.log(`Total: ${testProductsSnap.docs.length}`);
         
         console.log(`\nBrands created: ${createdBrandIds.length}`);

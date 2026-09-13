@@ -39,9 +39,6 @@ import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import Shipping from './pages/Shipping';
 import Returns from './pages/Returns';
-import MenWatches from './pages/MenWatches';
-import WomenWatches from './pages/WomenWatches';
-import ChildrenWatches from './pages/ChildrenWatches';
 import CategoryPage from './pages/CategoryPage';
 import BrandPage from './pages/BrandPage';
 import SearchPage from './pages/SearchPage';
@@ -123,9 +120,6 @@ const AnimatedRoutes = () => {
         <Route path="/brand/:slugId" element={<PageWrapper><BrandPage /></PageWrapper>} />
 
         {/* Legacy Route Redirects */}
-        <Route path="/men-watches" element={<PageWrapper><MenWatches /></PageWrapper>} />
-        <Route path="/women-watches" element={<PageWrapper><WomenWatches /></PageWrapper>} />
-        <Route path="/children-watches" element={<PageWrapper><ChildrenWatches /></PageWrapper>} />
 
         <Route path="/cart" element={<PageWrapper><CartPage /></PageWrapper>} />
         <Route path="/wishlist" element={<PageWrapper><WishlistPage /></PageWrapper>} />

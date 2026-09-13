@@ -98,13 +98,13 @@ export default function NavigationDrawer({ isOpen, onClose }) {
                             >
                                 <img
                                     src={logo}
-                                    alt="متجر السعيدة"
+                                    alt="متجر الخزرجي"
                                     style={{
                                         width: '40px', height: '40px',
                                         objectFit: 'cover',
                                         borderRadius: '10px',
-                                        border: '1px solid rgba(212,175,55,0.25)',
-                                        boxShadow: theme === 'dark' ? '0 0 10px rgba(212,175,55,0.1)' : 'none',
+                                        border: '1px solid rgba(var(--primary-rgb),0.25)',
+                                        boxShadow: theme === 'dark' ? '0 0 10px rgba(var(--primary-rgb),0.1)' : 'none',
                                         flexShrink: 0
                                     }}
                                 />
@@ -115,7 +115,7 @@ export default function NavigationDrawer({ isOpen, onClose }) {
                                         color: 'var(--text-main)',
                                         margin: 0, lineHeight: 1.2
                                     }}>
-                                        <span style={{ color: 'var(--primary)' }}>متجر</span> السعيدة
+                                        <span style={{ color: 'var(--primary)' }}>متجر</span> الخزرجي
                                     </p>
                                     <p style={{
                                         fontSize: '0.68rem', color: 'var(--text-dim)',
@@ -148,8 +148,8 @@ export default function NavigationDrawer({ isOpen, onClose }) {
                                     display: 'flex', alignItems: 'center', gap: '10px',
                                     cursor: 'pointer', marginBottom: '16px',
                                     padding: '10px 11px', borderRadius: '12px',
-                                    background: 'rgba(212,175,55,0.05)',
-                                    border: '1px solid rgba(212,175,55,0.09)'
+                                    background: 'rgba(var(--primary-rgb),0.05)',
+                                    border: '1px solid rgba(var(--primary-rgb),0.09)'
                                 }}
                                 onClick={() => { currentUser ? openProfilePage() : openAuthModal(); onClose(); }}
                             >

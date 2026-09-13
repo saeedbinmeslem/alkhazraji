@@ -251,7 +251,7 @@ export default function ProfileModal() {
             <div className="glass-panel" ref={containerRef} style={{
                 width: '90%', maxWidth: '500px', padding: '40px',
                 position: 'relative', maxHeight: '90vh', overflowY: 'auto',
-                borderRadius: '20px', border: '1px solid rgba(212,175,55,0.2)'
+                borderRadius: '20px', border: '1px solid rgba(var(--primary-rgb),0.2)'
             }}>
                 {/* Close */}
                 <button onClick={() => { closeProfileModal(); setIsEditing(false); }} style={{
@@ -267,7 +267,7 @@ export default function ProfileModal() {
                 <div style={{ textAlign: 'center', marginBottom: '24px', position: 'relative' }}>
                     <div style={{
                         width: '90px', height: '90px', borderRadius: '50%',
-                        background: 'rgba(212,175,55,0.1)', display: 'flex',
+                        background: 'rgba(var(--primary-rgb),0.1)', display: 'flex',
                         alignItems: 'center', justifyContent: 'center',
                         margin: '0 auto 12px', border: '2px solid var(--primary)',
                         position: 'relative', overflow: 'hidden'
@@ -290,7 +290,7 @@ export default function ProfileModal() {
                         )}
                     </div>
                     <h2 style={{ color: 'var(--primary)', marginBottom: '2px', fontSize: '1.3rem', fontWeight: '800' }}>{currentUser.name}</h2>
-                    <p style={{ color: 'rgba(255,255,255,0.35)', fontSize: '0.82rem' }}>عضو في متجر السعيدة</p>
+                    <p style={{ color: 'rgba(255,255,255,0.35)', fontSize: '0.82rem' }}>عضو في متجر الخزرجي</p>
                 </div>
 
                 {/* Tabs */}
@@ -305,7 +305,7 @@ export default function ProfileModal() {
                         {/* Edit toggle */}
                         <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '20px' }}>
                             <button onClick={() => setIsEditing(!isEditing)} style={{
-                                background: isEditing ? 'rgba(239,68,68,0.08)' : 'rgba(212,175,55,0.08)',
+                                background: isEditing ? 'rgba(239,68,68,0.08)' : 'rgba(var(--primary-rgb),0.08)',
                                 border: `1px solid ${isEditing ? '#ef4444' : 'var(--primary)'}`,
                                 color: isEditing ? '#ef4444' : 'var(--primary)',
                                 padding: '8px 18px', borderRadius: '10px', cursor: 'pointer',
@@ -423,7 +423,7 @@ export default function ProfileModal() {
                                             value={formData.district}
                                             onChange={e => setFormData(prev => ({ ...prev, district: e.target.value }))}
                                             disabled={!isEditing}
-                                            placeholder="مثال: المكلا"
+                                            placeholder="مثال: تريم"
                                             style={isEditing ? inputStyle : readonlyStyle}
                                         />
                                     </div>
@@ -447,12 +447,12 @@ export default function ProfileModal() {
                                 <button type="submit" style={{
                                     width: '100%', padding: '13px',
                                     borderRadius: '12px', border: 'none',
-                                    background: 'linear-gradient(135deg, var(--primary) 0%, #b8860b 100%)',
+                                    background: 'linear-gradient(135deg, var(--primary) 0%, var(--primary) 100%)',
                                     color: '#000', fontWeight: '900', fontSize: '1rem',
                                     cursor: 'pointer', display: 'flex', alignItems: 'center',
                                     justifyContent: 'center', gap: '10px', marginTop: '6px',
                                     fontFamily: "'Cairo', sans-serif",
-                                    boxShadow: '0 8px 24px rgba(212,175,55,0.25)'
+                                    boxShadow: '0 8px 24px rgba(var(--primary-rgb),0.25)'
                                 }}>
                                     <Save size={18} /> حفظ التغييرات
                                 </button>
@@ -532,13 +532,13 @@ export default function ProfileModal() {
                         <button type="submit" disabled={pwLoading} style={{
                             width: '100%', padding: '13px', borderRadius: '12px', border: 'none',
                             background: pwLoading
-                                ? 'rgba(212,175,55,0.35)'
-                                : 'linear-gradient(135deg, var(--primary) 0%, #b8860b 100%)',
+                                ? 'rgba(var(--primary-rgb),0.35)'
+                                : 'linear-gradient(135deg, var(--primary) 0%, var(--primary) 100%)',
                             color: '#000', fontWeight: '900', fontSize: '1rem',
                             cursor: pwLoading ? 'not-allowed' : 'pointer',
                             display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px',
                             marginTop: '4px', fontFamily: "'Cairo', sans-serif",
-                            boxShadow: pwLoading ? 'none' : '0 8px 24px rgba(212,175,55,0.25)'
+                            boxShadow: pwLoading ? 'none' : '0 8px 24px rgba(var(--primary-rgb),0.25)'
                         }}>
                             <Lock size={18} />
                             {pwLoading ? 'جاري الحفظ...' : 'تغيير كلمة المرور'}

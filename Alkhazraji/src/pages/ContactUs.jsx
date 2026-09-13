@@ -12,24 +12,24 @@ const contactItems = [
   {
     icon: Phone,
     label: 'واتساب',
-    lines: ['772754414', '775055319'],
+    lines: ['772503986'],
     color: '#25d366',
   },
   {
     icon: Mail,
     label: 'البريد الإلكتروني',
-    lines: ['alsaeedah8@gmail.com'],
+    lines: ['Alkhazraji8@gmail.com'],
     color: 'var(--primary)',
   },
   {
     icon: MapPin,
     label: 'العنوان',
-    lines: ['حضرموت / المكلا / الشرج'],
+    lines: ['اليمن / حضرموت / تريم'],
     color: '#e07b54',
   },
   {
     icon: Clock,
-    label: 'ساعات العمل',
+    label: 'مستلزمات العمل',
     lines: ['السبت – الخميس', '8 صباحاً حتى 10 مساءً'],
     color: '#7c9ef5',
   },
@@ -113,7 +113,7 @@ export default function ContactUs() {
               fontWeight: 600,
             }}
           >
-            ALSAEEDAH
+            Alkhazraji
           </motion.p>
           <motion.h1
             variants={fadeIn}
@@ -266,7 +266,7 @@ export default function ContactUs() {
                   width: '64px',
                   height: '64px',
                   borderRadius: '50%',
-                  background: 'rgba(212,175,55,0.15)',
+                  background: 'rgba(var(--primary-rgb),0.15)',
                   border: '2px solid var(--primary)',
                   display: 'flex',
                   alignItems: 'center',
@@ -373,7 +373,7 @@ export default function ContactUs() {
                 />
               </div>
               <motion.button
-                whileHover={{ scale: 1.02, boxShadow: '0 8px 24px rgba(212,175,55,0.3)' }}
+                whileHover={{ scale: 1.02, boxShadow: '0 8px 24px rgba(var(--primary-rgb),0.3)' }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => setSent(true)}
                 style={{

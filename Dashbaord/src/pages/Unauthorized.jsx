@@ -69,7 +69,7 @@ const Unauthorized = () => {
                             fontWeight: '800',
                             fontFamily: "'Cairo', sans-serif",
                             border: 'none',
-                            background: 'linear-gradient(135deg, #d4af37 0%, #b8860b 100%)',
+                            background: 'linear-gradient(135deg, var(--primary) 0%, var(--primary) 100%)',
                             color: '#000'
                         }}
                     >

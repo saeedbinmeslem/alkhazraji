@@ -5,13 +5,8 @@ import { SplashScreen } from '@capacitor/splash-screen'
 import { Capacitor } from '@capacitor/core'
 import App from './App.jsx'
 import './index.css'
-import { db } from './firebase/config'
-import { syncCoordinator } from '../../shared/sync/SyncCoordinator.js'
 
 console.log('[Startup] [3] React Modules Loaded');
-
-// Initialize the Offline-First Sync Engine
-syncCoordinator.initialize(db);
 
 try {
   console.log('[Startup] [4] Mounting React App');
@@ -25,5 +20,3 @@ try {
   console.error('[Startup] FATAL: React Mounting failed:', error);
   throw error;
 }
-
-

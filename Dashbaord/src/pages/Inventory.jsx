@@ -267,7 +267,7 @@ const Inventory = () => {
                                         {!isTracked ? (
                                             <div style={{ textAlign: 'center' }}>
                                                 <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '15px' }}>تتبع المخزون غير مفعل</p>
-                                                <button onClick={() => handleEnableTracking(product.id)} style={{ padding: '10px 20px', background: 'rgba(212, 175, 55, 0.1)', color: 'var(--primary)', border: '1px solid var(--primary)', borderRadius: '12px', fontWeight: 'bold', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+                                                <button onClick={() => handleEnableTracking(product.id)} style={{ padding: '10px 20px', background: 'rgba(var(--primary-rgb), 0.1)', color: 'var(--primary)', border: '1px solid var(--primary)', borderRadius: '12px', fontWeight: 'bold', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
                                                     <Package size={18} /> تفعيل التتبع
                                                 </button>
                                             </div>

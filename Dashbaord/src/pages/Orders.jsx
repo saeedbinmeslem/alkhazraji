@@ -381,7 +381,7 @@ const Orders = () => {
                 }}>
                     إدارة الطلبات <span style={{ color: 'var(--primary)', fontSize: isMobile ? '0.9rem' : '1.2rem', verticalAlign: 'middle', opacity: 0.8 }}>| مركز العمليات</span>
                 </h1>
-                <p style={{ color: 'var(--text-muted)', fontSize: isMobile ? '0.95rem' : '1.1rem' }}>تتبع، تنظيم، وإصدار فواتير عملاء متجر السعيدة.</p>
+                <p style={{ color: 'var(--text-muted)', fontSize: isMobile ? '0.95rem' : '1.1rem' }}>تتبع، تنظيم، وإصدار فواتير عملاء متجر الخزرجي.</p>
             </div>
 
             <div style={{ 
@@ -391,7 +391,7 @@ const Orders = () => {
                 marginBottom: isMobile ? '2rem' : '3rem' 
             }}>
                 {[
-                    { label: 'بانتظار المعالجة', value: `${pendingCount} طلب`, icon: <ShoppingCart size={isMobile ? 18 : 22} />, color: 'var(--primary)', bg: 'rgba(212, 175, 55, 0.15)', delay: 0.1 },
+                    { label: 'بانتظار المعالجة', value: `${pendingCount} طلب`, icon: <ShoppingCart size={isMobile ? 18 : 22} />, color: 'var(--primary)', bg: 'rgba(var(--primary-rgb), 0.15)', delay: 0.1 },
                     { label: 'طلبات مكتملة', value: `${completedCount} طلب`, icon: <CheckCircle size={isMobile ? 18 : 22} />, color: '#10b981', bg: 'rgba(16, 185, 129, 0.15)', delay: 0.2 },
                     { label: 'الإجمالي الحالي', value: `${totalRevenue.toLocaleString()} ر.س`, icon: <TrendingUp size={isMobile ? 18 : 22} />, color: '#f59e0b', bg: 'rgba(245, 158, 11, 0.15)', delay: 0.3 }
                 ].map((stat, i) => (
@@ -540,7 +540,7 @@ const ImagePreviewModal = ({ imageUrl, onClose }) => {
                             objectFit: 'contain',
                             borderRadius: '16px',
                             boxShadow: '0 20px 50px rgba(0,0,0,0.5)',
-                            border: '2px solid rgba(212, 175, 55, 0.3)',
+                            border: '2px solid rgba(var(--primary-rgb), 0.3)',
                             background: '#0a0a0a'
                         }}
                         onClick={(e) => e.stopPropagation()}
@@ -602,7 +602,7 @@ const OrderCard = ({ order, lastOrderRef, onUpdateStatus, onDelete, onDownloadIn
                 border: isHighlighted ? '2px solid var(--primary)' : '1px solid var(--border-color)',
                 overflow: 'hidden',
                 boxShadow: isHighlighted
-                    ? '0 0 30px rgba(212, 175, 55, 0.4), 0 10px 30px rgba(0,0,0,0.1)'
+                    ? '0 0 30px rgba(var(--primary-rgb), 0.4), 0 10px 30px rgba(0,0,0,0.1)'
                     : '0 10px 30px rgba(0,0,0,0.1)',
                 transition: 'border 0.4s ease, box-shadow 0.4s ease',
             }}
@@ -618,7 +618,7 @@ const OrderCard = ({ order, lastOrderRef, onUpdateStatus, onDelete, onDownloadIn
                 gap: '10px' 
             }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? '8px' : '20px' }}>
-                    <div style={{ padding: '6px 12px', background: 'rgba(212, 175, 55, 0.1)', borderRadius: '10px', border: '1px solid rgba(212, 175, 55, 0.2)' }}>
+                    <div style={{ padding: '6px 12px', background: 'rgba(var(--primary-rgb), 0.1)', borderRadius: '10px', border: '1px solid rgba(var(--primary-rgb), 0.2)' }}>
                         <span style={{ fontSize: isMobile ? '0.85rem' : '1.1rem', fontWeight: '900', color: 'var(--primary)', letterSpacing: '0.5px' }}>ORD{order.order_number}</span>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--text-muted)', fontSize: isMobile ? '0.7rem' : '0.9rem' }}>
@@ -668,7 +668,7 @@ const OrderCard = ({ order, lastOrderRef, onUpdateStatus, onDelete, onDownloadIn
                                         />
                                         <div style={{ display: 'flex', flexDirection: 'column' }}>
                                             <span style={{ fontSize: isMobile ? '0.8rem' : '0.9rem', fontWeight: '700', color: '#fff' }}>{item.name || item.title}</span>
-                                            <span style={{ fontSize: '0.7rem', color: 'var(--text-dim)' }}>{item.displayId ? `#${item.displayId}` : 'ساعة راقية'}</span>
+                                            <span style={{ fontSize: '0.7rem', color: 'var(--text-dim)' }}>{item.displayId ? `#${item.displayId}` : 'منتج جديد'}</span>
                                         </div>
                                     </div>
                                     <div style={{ textAlign: 'left' }}><span style={{ fontSize: '0.85rem', fontWeight: '900', color: 'var(--primary)' }}>{item.dp_qty || item.quantity} ×</span><br/><span style={{ fontSize: '0.75rem', color: 'var(--text-dim)' }}>{item.price.toLocaleString()}</span></div>
@@ -685,7 +685,7 @@ const OrderCard = ({ order, lastOrderRef, onUpdateStatus, onDelete, onDownloadIn
             </div>
             <div style={{ 
                 padding: isMobile ? '16px' : '24px 30px', 
-                background: 'rgba(212, 175, 55, 0.03)', 
+                background: 'rgba(var(--primary-rgb), 0.03)', 
                 borderTop: '1px solid var(--border-color)', 
                 display: 'flex', 
                 flexDirection: isMobile ? 'column' : 'row',
@@ -746,7 +746,7 @@ const OrderCard = ({ order, lastOrderRef, onUpdateStatus, onDelete, onDownloadIn
                                 whileHover={{ scale: 1.02 }} 
                                 whileTap={{ scale: 0.98 }} 
                                 onClick={() => onUpdateStatus(order.id, 'completed')} 
-                                style={{ flex: 1, padding: isMobile ? '0 6px' : '0 15px', height: isMobile ? '38px' : '44px', borderRadius: '12px', background: 'var(--primary)', color: '#000', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: isMobile ? '4px' : '8px', fontSize: isMobile ? '0.75rem' : '0.85rem', fontWeight: '800', whiteSpace: 'nowrap', boxShadow: '0 4px 15px rgba(212, 175, 55, 0.2)' }}>
+                                style={{ flex: 1, padding: isMobile ? '0 6px' : '0 15px', height: isMobile ? '38px' : '44px', borderRadius: '12px', background: 'var(--primary)', color: '#000', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: isMobile ? '4px' : '8px', fontSize: isMobile ? '0.75rem' : '0.85rem', fontWeight: '800', whiteSpace: 'nowrap', boxShadow: '0 4px 15px rgba(var(--primary-rgb), 0.2)' }}>
                                 <CheckCircle size={isMobile ? 14 : 18} /> إتمام
                             </motion.button>
                             <motion.button 

@@ -82,7 +82,7 @@ export default function Shipping() {
               fontWeight: 600,
             }}
           >
-            ALSAEEDAH
+            Alkhazraji
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -145,8 +145,8 @@ export default function Shipping() {
                     width: '56px',
                     height: '56px',
                     borderRadius: '16px',
-                    background: `${card.color === 'var(--primary)' ? 'rgba(212,175,55' : card.color === '#e07b54' ? 'rgba(224,123,84' : 'rgba(124,158,245'},0.12)`,
-                    border: `1px solid ${card.color === 'var(--primary)' ? 'rgba(212,175,55' : card.color === '#e07b54' ? 'rgba(224,123,84' : 'rgba(124,158,245'},0.3)`,
+                    background: `${card.color === 'var(--primary)' ? 'rgba(var(--primary-rgb)' : card.color === '#e07b54' ? 'rgba(224,123,84' : 'rgba(124,158,245'},0.12)`,
+                    border: `1px solid ${card.color === 'var(--primary)' ? 'rgba(var(--primary-rgb)' : card.color === '#e07b54' ? 'rgba(224,123,84' : 'rgba(124,158,245'},0.3)`,
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -219,8 +219,8 @@ export default function Shipping() {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'space-between',
-                background: 'rgba(212,175,55,0.06)',
-                border: '1px solid rgba(212,175,55,0.2)',
+                background: 'rgba(var(--primary-rgb),0.06)',
+                border: '1px solid rgba(var(--primary-rgb),0.2)',
                 borderRadius: '12px',
                 padding: '16px 20px',
               }}
@@ -306,7 +306,7 @@ export default function Shipping() {
             للاستفسار عن حالة شحنتكم أو أي استفسارات تتعلق بالتوصيل، تواصلوا معنا عبر واتساب
           </p>
           <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            {['772754414', '775055319'].map((num) => (
+            {['772503986'].map((num) => (
               <a
                 key={num}
                 href={`https://wa.me/967${num}`}
@@ -343,7 +343,7 @@ export default function Shipping() {
             lineHeight: 1.8,
           }}
         >
-          متجر السعيدة — نوصل الفخامة إلى بابكم
+          متجر الخزرجي — دليلك لصناعة مشروعك الدواجني
         </motion.p>
       </div>
     </div>

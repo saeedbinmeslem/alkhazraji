@@ -23,14 +23,14 @@ export default function CheckoutConfirmModal({ isOpen, onClose, onConfirm }) {
                 maxWidth: '400px',
                 padding: '30px',
                 textAlign: 'center',
-                border: '1px solid rgba(212, 175, 55, 0.3)',
+                border: '1px solid rgba(var(--primary-rgb), 0.3)',
                 boxShadow: '0 10px 40px rgba(0,0,0,0.5)'
             }}>
                 <div style={{
                     width: '70px',
                     height: '70px',
                     borderRadius: '50%',
-                    background: 'rgba(212, 175, 55, 0.1)',
+                    background: 'rgba(var(--primary-rgb), 0.1)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',

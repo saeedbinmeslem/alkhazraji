@@ -150,10 +150,10 @@ export default function CheckoutPage() {
             {/* Isolated Header */}
             <header style={{ padding: '20px 24px', paddingTop: 'calc(20px + var(--safe-area-top))', borderBottom: '1px solid var(--border-color)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'var(--bg-card)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                    <img src={logo} alt="متجر السعيدة" style={{ width: '40px', height: '40px', borderRadius: '50%', objectFit: 'cover' }} />
+                    <img src={logo} alt="متجر الخزرجي" style={{ width: '40px', height: '40px', borderRadius: '50%', objectFit: 'cover' }} />
                     <div>
                         <p style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: '1rem', color: 'var(--text-main)', margin: 0 }}>
-                            <span style={{ color: 'var(--primary)' }}>متجر</span> السعيدة
+                            <span style={{ color: 'var(--primary)' }}>متجر</span> الخزرجي
                         </p>
                         <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.7rem', color: 'var(--text-dim)', margin: 0, letterSpacing: '1px' }}>SECURE CHECKOUT</p>
                     </div>
@@ -253,7 +253,7 @@ export default function CheckoutPage() {
                                     ))}
                                 </div>
 
-                                <div style={{ background: 'rgba(212,175,55,0.06)', border: '1px solid rgba(212,175,55,0.2)', borderRadius: '12px', padding: '14px 18px', marginBottom: '24px', fontFamily: 'var(--font-main)', fontSize: '0.85rem', color: 'var(--text-dim)', lineHeight: 1.7 }}>
+                                <div style={{ background: 'rgba(var(--primary-rgb),0.06)', border: '1px solid rgba(var(--primary-rgb),0.2)', borderRadius: '12px', padding: '14px 18px', marginBottom: '24px', fontFamily: 'var(--font-main)', fontSize: '0.85rem', color: 'var(--text-dim)', lineHeight: 1.7 }}>
                                     للتعديل على بيانات التوصيل، يرجى الذهاب إلى الملف الشخصي.
                                 </div>
 
@@ -277,7 +277,7 @@ export default function CheckoutPage() {
                                                     if (method.id !== 'transfer') setSelectedBank(null);
                                                 }}
                                                 style={{
-                                                    background: selectedPayment === method.id ? 'rgba(212,175,55,0.1)' : 'var(--bg-card)',
+                                                    background: selectedPayment === method.id ? 'rgba(var(--primary-rgb),0.1)' : 'var(--bg-card)',
                                                     border: `2px solid ${selectedPayment === method.id ? 'var(--primary)' : 'var(--border-color)'}`,
                                                     borderRadius: '14px', padding: '20px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '16px',
                                                     textAlign: 'right', transition: 'all 0.2s', width: '100%'
@@ -307,7 +307,7 @@ export default function CheckoutPage() {
                                                                     onClick={() => setSelectedBank(bank.id)}
                                                                     style={{
                                                                         padding: '16px',
-                                                                        background: selectedBank === bank.id ? 'rgba(212, 175, 55, 0.15)' : 'var(--bg-card)',
+                                                                        background: selectedBank === bank.id ? 'rgba(var(--primary-rgb), 0.15)' : 'var(--bg-card)',
                                                                         borderRadius: '12px',
                                                                         border: '1px solid',
                                                                         borderColor: selectedBank === bank.id ? 'var(--primary)' : 'var(--border-color)',

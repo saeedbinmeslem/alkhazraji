@@ -55,9 +55,9 @@ const getYouTubeId = (url) => {
 };
 
 const getCategoryLabel = (cat) =>
-  cat === 'men' ? 'ساعات رجالية' :
-  cat === 'women' ? 'ساعات نسائية' :
-  cat === 'children' ? 'ساعات أطفال' : 'ساعات فاخرة';
+  cat === 'men' ? 'مستلزمات رجالية' :
+  cat === 'women' ? 'مستلزمات نسائية' :
+  cat === 'children' ? 'مستلزمات أطفال' : 'مستلزمات فاخرة';
 
 const getStyleLabel = (style) =>
   style === 'classic' ? 'كلاسيك' :
@@ -341,7 +341,7 @@ const TrustCardsSection = () => {
           <motion.div
             key={i}
             className="trust-card"
-            whileHover={{ y: -4, borderColor: 'rgba(212,175,55,0.4)' }}
+            whileHover={{ y: -4, borderColor: 'rgba(var(--primary-rgb),0.4)' }}
             transition={{ duration: 0.25 }}
           >
             <item.icon size={26} className="trust-icon" strokeWidth={1.5} />
@@ -565,7 +565,7 @@ const SpecsStrip = ({ product }) => (
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          whileHover={{ y: -6, borderColor: 'rgba(212,175,55,0.5)' }}
+          whileHover={{ y: -6, borderColor: 'rgba(var(--primary-rgb),0.5)' }}
           transition={{ duration: 0.25 }}
         >
           <div className="spec-icon-wrap">
@@ -603,7 +603,7 @@ const InfoTabs = ({ product }) => {
               الوصف
             </h3>
             <p className="tab-description-text">
-              {product.description || 'ساعة فاخرة تجمع بين الأناقة الكلاسيكية والتقنية الحديثة. مصنوعة من أجود المواد وبدقة متناهية لتمنحك تجربة فريدة في قياس الوقت. تتميز بتصميم عصري يناسب جميع المناسبات.'}
+              {product.description || 'منتج فاخر تجمع بين الأناقة الكلاسيكية والتقنية الحديثة. مصنوعة من أجود المواد وبدقة متناهية لتمنحك تجربة فريدة في قياس الوقت. تتميز بتصميم عصري يناسب جميع المناسبات.'}
             </p>
             {product.style && (
               <div className="tab-desc-tags">
@@ -1012,8 +1012,8 @@ const ProductDetails = () => {
           font-size: 0.7rem;
           flex-direction: column;
           gap: 4px;
-          background: rgba(212,175,55,0.05);
-          border-color: rgba(212,175,55,0.2);
+          background: rgba(var(--primary-rgb),0.05);
+          border-color: rgba(var(--primary-rgb),0.2);
         }
         .hero-thumb--video.active { border-color: var(--primary); }
 
@@ -1034,7 +1034,7 @@ const ProductDetails = () => {
         .hero-canvas-glow {
           position: absolute;
           inset: 0;
-          background: radial-gradient(circle at 50% 50%, rgba(212,175,55,0.08) 0%, transparent 70%);
+          background: radial-gradient(circle at 50% 50%, rgba(var(--primary-rgb),0.08) 0%, transparent 70%);
           pointer-events: none;
           z-index: 0;
         }
@@ -1381,12 +1381,12 @@ const ProductDetails = () => {
           border-radius: 14px;
           cursor: pointer;
           font-family: var(--font-main);
-          box-shadow: 0 12px 32px rgba(212,175,55,0.3);
+          box-shadow: 0 12px 32px rgba(var(--primary-rgb),0.3);
           transition: all 0.3s ease;
         }
         .btn-add-cart:hover {
           background: #c9a227;
-          box-shadow: 0 18px 40px rgba(212,175,55,0.45);
+          box-shadow: 0 18px 40px rgba(var(--primary-rgb),0.45);
           transform: scale(1.02);
         }
         .pi-icon-actions {
@@ -1408,11 +1408,11 @@ const ProductDetails = () => {
           transition: all 0.25s ease;
         }
         .btn-icon-action:hover {
-          background: rgba(212,175,55,0.08);
+          background: rgba(var(--primary-rgb),0.08);
         }
         .btn-icon-action.active-fav {
           border-color: var(--primary);
-          background: rgba(212,175,55,0.08);
+          background: rgba(var(--primary-rgb),0.08);
         }
         .btn-icon-action.copied {
           border-color: #10B981;
@@ -1534,8 +1534,8 @@ const ProductDetails = () => {
           width: 48px;
           height: 48px;
           border-radius: 50%;
-          background: rgba(212,175,55,0.08);
-          border: 1px solid rgba(212,175,55,0.2);
+          background: rgba(var(--primary-rgb),0.08);
+          border: 1px solid rgba(var(--primary-rgb),0.2);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -1598,9 +1598,9 @@ const ProductDetails = () => {
           align-items: center;
           gap: 6px;
           padding: 8px 16px;
-          background: rgba(212,175,55,0.15);
+          background: rgba(var(--primary-rgb),0.15);
           backdrop-filter: blur(12px);
-          border: 1px solid rgba(212,175,55,0.3);
+          border: 1px solid rgba(var(--primary-rgb),0.3);
           border-radius: 50px;
           color: var(--primary);
           font-size: 0.82rem;
@@ -1647,13 +1647,13 @@ const ProductDetails = () => {
           border: 1px solid var(--border-color);
           transition: all 0.3s ease;
         }
-        .story-feat-card:hover { border-color: rgba(212,175,55,0.35); transform: translateY(-4px); }
+        .story-feat-card:hover { border-color: rgba(var(--primary-rgb),0.35); transform: translateY(-4px); }
         .story-feat-icon {
           width: 40px;
           height: 40px;
           border-radius: 10px;
-          background: rgba(212,175,55,0.08);
-          border: 1px solid rgba(212,175,55,0.2);
+          background: rgba(var(--primary-rgb),0.08);
+          border: 1px solid rgba(var(--primary-rgb),0.2);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -1776,7 +1776,7 @@ const ProductDetails = () => {
           border: 1px solid var(--border-color);
           transition: border-color 0.3s;
         }
-        .shipping-card:hover { border-color: rgba(212,175,55,0.3); }
+        .shipping-card:hover { border-color: rgba(var(--primary-rgb),0.3); }
         .shipping-card-icon {
           color: var(--primary);
           margin-bottom: 14px;
@@ -1878,7 +1878,7 @@ const ProductDetails = () => {
         .rel-nav-btn:hover:not(.disabled) {
           border-color: var(--primary);
           color: var(--primary);
-          background: rgba(212,175,55,0.08);
+          background: rgba(var(--primary-rgb),0.08);
         }
         .rel-nav-btn.disabled { opacity: 0.3; cursor: default; }
         .related-track {
@@ -2040,8 +2040,8 @@ const ProductDetails = () => {
           width: 120px;
           height: 120px;
           border-radius: 50%;
-          background: rgba(212,175,55,0.08);
-          border: 1px solid rgba(212,175,55,0.2);
+          background: rgba(var(--primary-rgb),0.08);
+          border: 1px solid rgba(var(--primary-rgb),0.2);
           display: flex;
           align-items: center;
           justify-content: center;

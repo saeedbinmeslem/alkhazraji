@@ -27,9 +27,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg', 'logo.png'],
       manifest: {
-        name: 'لوحة تحكم السعيدة',
-        short_name: 'السعيدة',
-        description: 'لوحة تحكم متجر السعيدة',
+        name: 'لوحة تحكم الخزرجي',
+        short_name: 'الخزرجي',
+        description: 'لوحة تحكم متجر الخزرجي',
         theme_color: '#000000',
         background_color: '#000000',
         display: 'standalone',

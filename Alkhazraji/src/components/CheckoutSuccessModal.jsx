@@ -31,7 +31,7 @@ export default function CheckoutSuccessModal({ isOpen, onClose, onProceed }) {
                             maxWidth: '400px',
                             padding: '40px 30px',
                             textAlign: 'center',
-                            border: '1px solid rgba(212, 175, 55, 0.3)',
+                            border: '1px solid rgba(var(--primary-rgb), 0.3)',
                             boxShadow: '0 20px 50px rgba(0,0,0,0.6)',
                             position: 'relative'
                         }}
@@ -55,7 +55,7 @@ export default function CheckoutSuccessModal({ isOpen, onClose, onProceed }) {
                             width: '80px',
                             height: '80px',
                             borderRadius: '50%',
-                            background: 'rgba(212, 175, 55, 0.1)',
+                            background: 'rgba(var(--primary-rgb), 0.1)',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',

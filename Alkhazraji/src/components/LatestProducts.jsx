@@ -135,10 +135,10 @@ const LatestProducts = () => {
                         marginBottom: '10px',
                         fontFamily: 'var(--font-heading)'
                     }}>
-                        <span style={{ color: 'var(--primary)' }}>أحدث</span> الساعات
+                        <span style={{ color: 'var(--primary)' }}>أحدث</span> المستلزمات
                     </h2>
                     <p style={{ color: 'var(--text-dim)', fontSize: '1.2rem' }}>
-                        اكتشف آخر ما وصل من أناقة وفن في عالم الساعات
+                        اكتشف آخر ما وصل من أناقة وفن في عالم المستلزمات
                     </p>
                 </motion.div>
 

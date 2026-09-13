@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 const SEOHelper = () => {
     useEffect(() => {
         // Static metadata or remove dynamic fetching
-        updateMetaTags("Time Tick Store - الفخامة في كل ثانية");
+        updateMetaTags("متجر الخزرجي - دليلك لصناعة مشروعك الدواجني");
     }, []);
 
     const updateMetaTags = (description) => {

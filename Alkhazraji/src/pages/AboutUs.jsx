@@ -16,8 +16,8 @@ const stagger = {
 };
 
 const values = [
-  { title: 'الجودة الذهبية', desc: 'نختار لكم فقط أرقى الساعات العالمية من أعرق الماركات وأكثرها موثوقية.' },
-  { title: 'خدمة على مدار الساعة', desc: 'فريقنا متاح دائماً للإجابة على استفساراتكم وتقديم أفضل تجربة تسوق.' },
+  { title: 'الجودة الذهبية', desc: 'نختار لكم فقط أرقى المستلزمات العالمية من أعرق الماركات وأكثرها موثوقية.' },
+  { title: 'خدمة على مدار المنتج', desc: 'فريقنا متاح دائماً للإجابة على استفساراتكم وتقديم أفضل تجربة تسوق.' },
   { title: 'ضمان أصالة المنتجات', desc: 'جميع منتجاتنا أصلية 100% مع شهادات الأصالة والضمان الرسمي.' },
   { title: 'شحن سريع لكافة المحافظات', desc: 'نوصل طلباتكم إلى جميع أنحاء اليمن في أقصر وقت ممكن.' },
 ];
@@ -84,7 +84,7 @@ export default function AboutUs() {
               fontWeight: 600,
             }}
           >
-            ALSAEEDAH
+            Alkhazraji
           </motion.p>
           <motion.h1
             variants={fadeIn}
@@ -152,7 +152,7 @@ export default function AboutUs() {
               marginBottom: '16px',
             }}
           >
-            متجر السعيدة متخصص في ساعات الفخامة والمجموعات الراقية. نحن نؤمن بأن الساعة ليست مجرد أداة لمعرفة الوقت، بل قطعة فنية تعبر عن شخصيتك وذوقك الرفيع.
+            متجر الخزرجي هو مشروعك المتكامل لجميع احتياجات الدواجن. نحن نؤمن بأن توفير أفضل فقاسات البيض وحضانات الطيور ومستلزمات الدواجن هو مفتاح نجاح مشروعك.
           </p>
           <p
             style={{
@@ -163,12 +163,12 @@ export default function AboutUs() {
               marginBottom: '16px',
             }}
           >
-            انطلقنا بشغف حقيقي نحو عالم الساعات الفاخرة، وتطورنا لنصبح الوجهة الأولى لعشاق الأناقة والفخامة في اليمن. نقدم مجموعات مختارة بعناية فائقة من أرقى الماركات العالمية.
+            انطلقنا بشغف حقيقي نحو عالم تربية الدواجن والطيور، وتطورنا لنصبح الوجهة الأولى والموثوقة في اليمن لتجهيز المشاريع. نقدم معدات مختارة بعناية فائقة لضمان أعلى مستويات الإنتاج.
           </p>
           <div
             style={{
-              background: 'linear-gradient(135deg, rgba(212,175,55,0.08), rgba(212,175,55,0.03))',
-              border: '1px solid rgba(212,175,55,0.2)',
+              background: 'linear-gradient(135deg, rgba(var(--primary-rgb),0.08), rgba(var(--primary-rgb),0.03))',
+              border: '1px solid rgba(var(--primary-rgb),0.2)',
               borderRadius: '12px',
               padding: '20px',
               marginTop: '20px',
@@ -184,7 +184,7 @@ export default function AboutUs() {
                 margin: 0,
               }}
             >
-              "الفخامة في كل ثانية"
+              "دليلك لصناعة مشروعك الدواجني"
             </p>
           </div>
         </motion.div>
@@ -234,15 +234,15 @@ export default function AboutUs() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.45 + i * 0.1 }}
                 style={{
-                  background: 'rgba(212,175,55,0.04)',
-                  border: '1px solid rgba(212,175,55,0.15)',
+                  background: 'rgba(var(--primary-rgb),0.04)',
+                  border: '1px solid rgba(var(--primary-rgb),0.15)',
                   borderRadius: '14px',
                   padding: '20px',
                   transition: 'all 0.3s ease',
                 }}
                 whileHover={{
-                  borderColor: 'rgba(212,175,55,0.4)',
-                  background: 'rgba(212,175,55,0.07)',
+                  borderColor: 'rgba(var(--primary-rgb),0.4)',
+                  background: 'rgba(var(--primary-rgb),0.07)',
                 }}
               >
                 <div
@@ -296,7 +296,7 @@ export default function AboutUs() {
             lineHeight: 1.8,
           }}
         >
-          متجر السعيدة — شريككم في الأناقة والفخامة
+          متجر الخزرجي — دليلك لصناعة مشروعك الدواجني
         </motion.p>
       </div>
     </div>

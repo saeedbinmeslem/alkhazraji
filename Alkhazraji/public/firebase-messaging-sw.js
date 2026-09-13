@@ -1,9 +1,9 @@
 // ============================================================
 // Firebase Cloud Messaging Service Worker
-// File: AL-SAEEDAH/public/firebase-messaging-sw.js
+// File: Al-Khazraji/public/firebase-messaging-sw.js
 //
 // This Service Worker handles push notifications for the 
-// AL-SAEEDAH storefront when the tab is CLOSED or in the BACKGROUND.
+// Al-Khazraji storefront when the tab is CLOSED or in the BACKGROUND.
 //
 // STRICT CONSTRAINT: 
 // This file handles ONLY receiving pushes, displaying them, 
@@ -30,7 +30,7 @@ const messaging = firebase.messaging();
 messaging.onBackgroundMessage((payload) => {
   console.log("[SW] Background FCM message received:", payload);
 
-  const notificationTitle = payload.notification?.title || "السعيدة للصرافة";
+  const notificationTitle = payload.notification?.title || "الخزرجي للصرافة";
   const notificationBody = payload.notification?.body || "لديك إشعار جديد.";
 
   const notificationOptions = {

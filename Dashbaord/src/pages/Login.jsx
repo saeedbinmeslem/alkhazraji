@@ -115,7 +115,7 @@ const Login = () => {
         }}>
             <div className="glass-panel auth-card" style={{
                 borderRadius: 'var(--radius-lg)',
-                boxShadow: '0 0 60px rgba(212, 175, 55, 0.1)',
+                boxShadow: '0 0 60px rgba(var(--primary-rgb), 0.1)',
                 position: 'relative',
                 overflow: 'hidden'
             }}>
@@ -143,10 +143,10 @@ const Login = () => {
                         border: '1px solid var(--primary)',
                         padding: '5px'
                     }}>
-                        <img src={logo} alt="متجر السعيدة" style={{ width: '100%', height: '100%', borderRadius: '50%' }} />
+                        <img src={logo} alt="متجر الخزرجي" style={{ width: '100%', height: '100%', borderRadius: '50%' }} />
                     </div>
                     <h2 style={{ fontSize: '2rem', fontWeight: '800', color: '#fff', marginBottom: '10px' }}>
-                        <span style={{ color: 'var(--primary)' }}>متجر</span> السعيدة
+                        <span style={{ color: 'var(--primary)' }}>متجر</span> الخزرجي
                     </h2>
                     <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>سجل دخولك لإدارة متجرك الفاخر</p>
                 </div>

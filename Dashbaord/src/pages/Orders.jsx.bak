@@ -294,9 +294,9 @@ const Orders = () => {
         const creditSelected = paymentType === 'credit';
 
         invoiceDiv.innerHTML = `
-            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #d4af37; padding-bottom: 20px; margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--primary); padding-bottom: 20px; margin-bottom: 20px;">
                 <div style="flex: 1; text-align: right;">
-                    <h1 style="color: #d4af37; font-size: 28px; margin: 0 0 10px 0; font-weight: 700;">متجر السعيدة</h1>
+                    <h1 style="color: var(--primary); font-size: 28px; margin: 0 0 10px 0; font-weight: 700;">متجر السعيدة</h1>
                     <div style="font-size: 13px; color: #444; line-height: 1.8;">
                          <p style="margin: 0;"><strong>تواصل : </strong> 772754414, 775055319</p>
                          <p style="margin: 0;"><strong>الإيميل : </strong> alsaeedah8@gmail.com</p>
@@ -308,7 +308,7 @@ const Orders = () => {
                 </div>
                 <div style="flex: 1; text-align: left; display: flex; flex-direction: column; justify-content: space-between; height: 100px;">
                     <div>
-                        <p style="margin: 0; font-size: 15px; color: #d4af37; font-weight: bold; font-style: italic;">"الفخامة ... في كل ثانية"</p>
+                        <p style="margin: 0; font-size: 15px; color: var(--primary); font-weight: bold; font-style: italic;">"الفخامة ... في كل ثانية"</p>
                         <p style="margin: 5px 0 0; color: #888; font-size: 11px;">نصنع التميز، لنهديه إليكم</p>
                     </div>
                     <div style="font-size: 12px; color: #666;">
@@ -325,8 +325,8 @@ const Orders = () => {
                     <span style="font-size: 14px; font-weight: 700; color: #333; padding-inline-end: 16px;">نوع الدفع:</span>
                     <!-- نقد option -->
                     <div style="display: flex; align-items: center; gap: 8px; padding-inline-end: 18px;">
-                        <div style="width: 18px; height: 18px; border-radius: 50%; border: 2px solid #d4af37; display: flex; align-items: center; justify-content: center; background: #fff;">
-                            ${cashSelected ? '<div style="width: 10px; height: 10px; border-radius: 50%; background: #d4af37;"></div>' : ''}
+                        <div style="width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--primary); display: flex; align-items: center; justify-content: center; background: #fff;">
+                            ${cashSelected ? '<div style="width: 10px; height: 10px; border-radius: 50%; background: var(--primary);"></div>' : ''}
                         </div>
                         <span style="font-size: 14px; font-weight: 600; color: #333;">نقد</span>
                     </div>
@@ -334,8 +334,8 @@ const Orders = () => {
                     <div style="width: 1px; height: 20px; background: #e0d5b5;"></div>
                     <!-- أجل option -->
                     <div style="display: flex; align-items: center; gap: 8px; padding-inline-start: 18px;">
-                        <div style="width: 18px; height: 18px; border-radius: 50%; border: 2px solid #d4af37; display: flex; align-items: center; justify-content: center; background: #fff;">
-                            ${creditSelected ? '<div style="width: 10px; height: 10px; border-radius: 50%; background: #d4af37;"></div>' : ''}
+                        <div style="width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--primary); display: flex; align-items: center; justify-content: center; background: #fff;">
+                            ${creditSelected ? '<div style="width: 10px; height: 10px; border-radius: 50%; background: var(--primary);"></div>' : ''}
                         </div>
                         <span style="font-size: 14px; font-weight: 600; color: #333;">أجل</span>
                     </div>
@@ -364,12 +364,12 @@ const Orders = () => {
 
             <table style="width: 100%; border-collapse: collapse; margin-bottom: 30px;">
                 <thead>
-                    <tr style="background: rgba(212, 175, 55, 0.1); color: #000;">
-                        <th style="padding: 15px; text-align: right; border-bottom: 2px solid #d4af37;">رقم الموديل</th>
-                        <th style="padding: 15px; text-align: right; border-bottom: 2px solid #d4af37;">المنتج</th>
-                        <th style="padding: 15px; text-align: center; border-bottom: 2px solid #d4af37;">السعر</th>
-                        <th style="padding: 15px; text-align: center; border-bottom: 2px solid #d4af37;">الكمية</th>
-                        <th style="padding: 15px; text-align: left; border-bottom: 2px solid #d4af37;">الإجمالي</th>
+                    <tr style="background: rgba(var(--primary-rgb), 0.1); color: #000;">
+                        <th style="padding: 15px; text-align: right; border-bottom: 2px solid var(--primary);">رقم الموديل</th>
+                        <th style="padding: 15px; text-align: right; border-bottom: 2px solid var(--primary);">المنتج</th>
+                        <th style="padding: 15px; text-align: center; border-bottom: 2px solid var(--primary);">السعر</th>
+                        <th style="padding: 15px; text-align: center; border-bottom: 2px solid var(--primary);">الكمية</th>
+                        <th style="padding: 15px; text-align: left; border-bottom: 2px solid var(--primary);">الإجمالي</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -379,7 +379,7 @@ const Orders = () => {
                             <td style="padding: 15px; text-align: right; color: #000; font-weight: 600;">${item.name || item.title}</td>
                             <td style="padding: 15px; text-align: center; color: #333;">${(item.price || 0).toLocaleString()} ر.س</td>
                             <td style="padding: 15px; text-align: center; color: #333;">${item.dp_qty || item.quantity || 1}</td>
-                            <td style="padding: 15px; text-align: left; color: #d4af37; font-weight: bold;">${((item.price || 0) * (item.dp_qty || item.quantity || 1)).toLocaleString()} ر.س</td>
+                            <td style="padding: 15px; text-align: left; color: var(--primary); font-weight: bold;">${((item.price || 0) * (item.dp_qty || item.quantity || 1)).toLocaleString()} ر.س</td>
                         </tr>
                     `).join('')}
                 </tbody>
@@ -388,7 +388,7 @@ const Orders = () => {
             <div data-segment="total" style="display: flex; flex-direction: column; align-items: flex-start; margin-top: 30px; padding: 20px; background: #fcfcfc; border: 1px solid #eee; border-radius: 8px;">
                 <div style="width: 100%; display: flex; justify-content: space-between; font-size: 22px; font-weight: bold;">
                     <span style="color: #000;">الإجمالي الكلي:</span>
-                    <span style="color: #d4af37;">${order.total_amount.toLocaleString()} ر.س</span>
+                    <span style="color: var(--primary);">${order.total_amount.toLocaleString()} ر.س</span>
                 </div>
             </div>
 
@@ -475,7 +475,7 @@ const Orders = () => {
                 marginBottom: isMobile ? '2rem' : '3rem' 
             }}>
                 {[
-                    { label: 'بانتظار المعالجة', value: `${pendingCount} طلب`, icon: <ShoppingCart size={isMobile ? 18 : 22} />, color: 'var(--primary)', bg: 'rgba(212, 175, 55, 0.15)', delay: 0.1 },
+                    { label: 'بانتظار المعالجة', value: `${pendingCount} طلب`, icon: <ShoppingCart size={isMobile ? 18 : 22} />, color: 'var(--primary)', bg: 'rgba(var(--primary-rgb), 0.15)', delay: 0.1 },
                     { label: 'طلبات مكتملة', value: `${completedCount} طلب`, icon: <CheckCircle size={isMobile ? 18 : 22} />, color: '#10b981', bg: 'rgba(16, 185, 129, 0.15)', delay: 0.2 },
                     { label: 'الإجمالي الحالي', value: `${totalRevenue.toLocaleString()} ر.س`, icon: <TrendingUp size={isMobile ? 18 : 22} />, color: '#f59e0b', bg: 'rgba(245, 158, 11, 0.15)', delay: 0.3 }
                 ].map((stat, i) => (
@@ -605,7 +605,7 @@ const ImagePreviewModal = ({ imageUrl, onClose }) => {
                             objectFit: 'contain',
                             borderRadius: '16px',
                             boxShadow: '0 20px 50px rgba(0,0,0,0.5)',
-                            border: '2px solid rgba(212, 175, 55, 0.3)',
+                            border: '2px solid rgba(var(--primary-rgb), 0.3)',
                             background: '#0a0a0a'
                         }}
                         onClick={(e) => e.stopPropagation()}
@@ -667,7 +667,7 @@ const OrderCard = ({ order, index, lastOrderRef, onUpdateStatus, onDelete, onInv
                 border: isHighlighted ? '2px solid var(--primary)' : '1px solid var(--border-color)',
                 overflow: 'hidden',
                 boxShadow: isHighlighted
-                    ? '0 0 30px rgba(212, 175, 55, 0.4), 0 10px 30px rgba(0,0,0,0.1)'
+                    ? '0 0 30px rgba(var(--primary-rgb), 0.4), 0 10px 30px rgba(0,0,0,0.1)'
                     : '0 10px 30px rgba(0,0,0,0.1)',
                 transition: 'border 0.4s ease, box-shadow 0.4s ease',
             }}
@@ -683,7 +683,7 @@ const OrderCard = ({ order, index, lastOrderRef, onUpdateStatus, onDelete, onInv
                 gap: '10px' 
             }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? '8px' : '20px' }}>
-                    <div style={{ padding: '6px 12px', background: 'rgba(212, 175, 55, 0.1)', borderRadius: '10px', border: '1px solid rgba(212, 175, 55, 0.2)' }}>
+                    <div style={{ padding: '6px 12px', background: 'rgba(var(--primary-rgb), 0.1)', borderRadius: '10px', border: '1px solid rgba(var(--primary-rgb), 0.2)' }}>
                         <span style={{ fontSize: isMobile ? '0.85rem' : '1.1rem', fontWeight: '900', color: 'var(--primary)', letterSpacing: '0.5px' }}>ORD{order.order_number}</span>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--text-muted)', fontSize: isMobile ? '0.7rem' : '0.9rem' }}>
@@ -750,7 +750,7 @@ const OrderCard = ({ order, index, lastOrderRef, onUpdateStatus, onDelete, onInv
             </div>
             <div style={{ 
                 padding: isMobile ? '16px' : '24px 30px', 
-                background: 'rgba(212, 175, 55, 0.03)', 
+                background: 'rgba(var(--primary-rgb), 0.03)', 
                 borderTop: '1px solid var(--border-color)', 
                 display: 'flex', 
                 flexDirection: isMobile ? 'column' : 'row',
@@ -809,7 +809,7 @@ const OrderCard = ({ order, index, lastOrderRef, onUpdateStatus, onDelete, onInv
                                 whileHover={{ scale: 1.02 }} 
                                 whileTap={{ scale: 0.98 }} 
                                 onClick={() => onUpdateStatus(order.id, 'completed')} 
-                                style={{ flex: 1, padding: isMobile ? '0 6px' : '0 15px', height: isMobile ? '38px' : '44px', borderRadius: '12px', background: 'var(--primary)', color: '#000', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: isMobile ? '4px' : '8px', fontSize: isMobile ? '0.75rem' : '0.85rem', fontWeight: '800', whiteSpace: 'nowrap', boxShadow: '0 4px 15px rgba(212, 175, 55, 0.2)' }}>
+                                style={{ flex: 1, padding: isMobile ? '0 6px' : '0 15px', height: isMobile ? '38px' : '44px', borderRadius: '12px', background: 'var(--primary)', color: '#000', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: isMobile ? '4px' : '8px', fontSize: isMobile ? '0.75rem' : '0.85rem', fontWeight: '800', whiteSpace: 'nowrap', boxShadow: '0 4px 15px rgba(var(--primary-rgb), 0.2)' }}>
                                 <CheckCircle size={isMobile ? 14 : 18} /> إتمام
                             </motion.button>
                             <motion.button 

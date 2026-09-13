@@ -131,8 +131,8 @@ const AddProduct = () => {
     return (
         <ProductForm
             onSubmit={handleSubmit}
-            title="إضافة ساعة جديدة"
-            subTitle="أدخل تفاصيل الساعة بدقة لتظهر بشكل صحيح في المتجر"
+            title="إضافة منتج جديد"
+            subTitle="أدخل تفاصيل المنتج بدقة لتظهر بشكل صحيح في المتجر"
         />
     );
 };

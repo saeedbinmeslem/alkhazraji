@@ -70,7 +70,7 @@ export default function PaymentMethodsModal({ isOpen, onClose, onConfirm }) {
                             width: '100%',
                             maxWidth: '500px',
                             padding: '30px',
-                            border: '1px solid rgba(212, 175, 55, 0.3)',
+                            border: '1px solid rgba(var(--primary-rgb), 0.3)',
                             position: 'relative',
                             maxHeight: '90vh',
                             overflowY: 'auto'
@@ -102,7 +102,7 @@ export default function PaymentMethodsModal({ isOpen, onClose, onConfirm }) {
                                 onClick={() => setMainMethod(mainMethod === 'bank' ? null : 'bank')}
                                 style={{
                                     padding: '20px',
-                                    background: mainMethod === 'bank' ? 'rgba(212, 175, 55, 0.1)' : 'var(--glass-bg)',
+                                    background: mainMethod === 'bank' ? 'rgba(var(--primary-rgb), 0.1)' : 'var(--glass-bg)',
                                     borderRadius: '12px',
                                     border: mainMethod === 'bank' ? '2px solid var(--primary)' : '1px solid var(--glass-border)',
                                     cursor: 'pointer',
@@ -129,7 +129,7 @@ export default function PaymentMethodsModal({ isOpen, onClose, onConfirm }) {
                                                 onClick={(e) => { e.stopPropagation(); setSelectedBank(bank.id); }}
                                                 style={{
                                                     padding: '12px 15px',
-                                                    background: selectedBank === bank.id ? 'rgba(212, 175, 55, 0.15)' : 'var(--glass-bg)',
+                                                    background: selectedBank === bank.id ? 'rgba(var(--primary-rgb), 0.15)' : 'var(--glass-bg)',
                                                     borderRadius: '8px',
                                                     border: '1px solid',
                                                     borderColor: selectedBank === bank.id ? 'var(--primary)' : 'var(--glass-border)',
@@ -173,7 +173,7 @@ export default function PaymentMethodsModal({ isOpen, onClose, onConfirm }) {
                                     <Banknote size={28} color={mainMethod === 'cod' ? '#22c55e' : 'var(--text-dim)'} />
                                     <div>
                                         <h3 style={{ color: 'var(--text-main)', fontSize: '1.2rem' }}>الدفع عند الاستلام</h3>
-                                        <p style={{ color: 'var(--text-dim)', fontSize: '0.8rem' }}>متوفر حالياً في مدينة المكلا وضواحيها</p>
+                                        <p style={{ color: 'var(--text-dim)', fontSize: '0.8rem' }}>متوفر حالياً في مدينة تريم وضواحيها</p>
                                     </div>
                                 </div>
                                 {mainMethod === 'cod' && <Check size={20} color="#22c55e" />}

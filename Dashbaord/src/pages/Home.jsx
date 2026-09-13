@@ -139,7 +139,7 @@ const Home = () => {
     }, []);
 
     const statCards = [
-        { label: 'إجمالي المنتجات', value: stats.products, icon: Box, color: '#d4af37', bg: 'rgba(212, 175, 55, 0.15)', glow: 'rgba(212, 175, 55, 0.3)' },
+        { label: 'إجمالي المنتجات', value: stats.products, icon: Box, color: 'var(--primary)', bg: 'rgba(var(--primary-rgb), 0.15)', glow: 'rgba(var(--primary-rgb), 0.3)' },
         { label: 'إجمالي الطلبات', value: stats.orders, icon: ShoppingBag, color: '#3b82f6', bg: 'rgba(59, 130, 246, 0.15)', glow: 'rgba(59, 130, 246, 0.3)' },
         { label: 'إجمالي المستخدمين', value: stats.users, icon: UsersIcon, color: '#10b981', bg: 'rgba(16, 185, 129, 0.15)', glow: 'rgba(16, 185, 129, 0.3)' },
         { label: 'إجمالي الأرباح', value: typeof stats.revenue === 'number' ? `${stats.revenue.toLocaleString()} ر.س` : stats.revenue, icon: TrendingUp, color: '#f59e0b', bg: 'rgba(245, 158, 11, 0.15)', glow: 'rgba(245, 158, 11, 0.3)' },
@@ -167,7 +167,7 @@ const Home = () => {
                         نظرة عامة <span style={{ color: 'var(--primary)', fontSize: isMobile ? '0.9rem' : '1.2rem', verticalAlign: 'middle', opacity: 0.8 }}>| لوحة التحكم</span>
                     </h1>
                     <p style={{ color: 'var(--text-muted)', fontSize: isMobile ? '0.95rem' : '1.1rem', maxWidth: '600px' }}>
-                        مرحباً بك مجدداً! إليك ملخص سريع لأداء متجر "السعيدة" لهذا اليوم.
+                        مرحباً بك مجدداً! إليك ملخص سريع لأداء متجر "الخزرجي" لهذا اليوم.
                     </p>
                 </div>
                 <div style={{ 
@@ -260,7 +260,7 @@ const Home = () => {
                         <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
                             <div style={{ 
                                 width: '40px', height: '40px', borderRadius: '12px', 
-                                background: 'rgba(212, 175, 55, 0.1)', color: 'var(--primary)',
+                                background: 'rgba(var(--primary-rgb), 0.1)', color: 'var(--primary)',
                                 display: 'flex', alignItems: 'center', justifyContent: 'center'
                             }}>
                                 <Clock size={20} />
@@ -277,7 +277,7 @@ const Home = () => {
                             fontWeight: '700',
                             padding: '8px 16px',
                             borderRadius: '10px',
-                            background: 'rgba(212, 175, 55, 0.05)',
+                            background: 'rgba(var(--primary-rgb), 0.05)',
                             transition: '0.3s',
                             width: isMobile ? '100%' : 'auto',
                             justifyContent: 'center'
@@ -365,7 +365,7 @@ const Home = () => {
                             gap: '15px' 
                         }}>
                             <Link to="/products/add" style={{
-                                background: 'linear-gradient(135deg, var(--primary) 0%, #b4932a 100%)',
+                                background: 'linear-gradient(135deg, var(--primary) 0%, var(--primary) 100%)',
                                 color: '#000',
                                 padding: isMobile ? '15px' : '24px 15px',
                                 borderRadius: '20px',
@@ -377,7 +377,7 @@ const Home = () => {
                                 justifyContent: 'center',
                                 gap: '12px',
                                 transition: '0.3s',
-                                boxShadow: '0 10px 20px rgba(212, 175, 55, 0.2)'
+                                boxShadow: '0 10px 20px rgba(var(--primary-rgb), 0.2)'
                             }}>
                                 <Plus size={isMobile ? 22 : 28} strokeWidth={3} />
                                 <span style={{ fontSize: isMobile ? '0.9rem' : '1rem', fontWeight: '900' }}>إضافة منتج</span>
@@ -407,8 +407,8 @@ const Home = () => {
                     <div style={{
                         padding: isMobile ? '20px' : '30px',
                         borderRadius: '30px',
-                        background: 'rgba(212, 175, 55, 0.05)',
-                        border: '1px solid rgba(212, 175, 55, 0.1)',
+                        background: 'rgba(var(--primary-rgb), 0.05)',
+                        border: '1px solid rgba(var(--primary-rgb), 0.1)',
                         flex: 1,
                         display: 'flex',
                         flexDirection: isMobile ? 'row' : 'column',
@@ -428,7 +428,7 @@ const Home = () => {
                         <div>
                             <h3 style={{ color: 'var(--primary)', fontWeight: '800', fontSize: isMobile ? '1rem' : '1.1rem', marginBottom: '4px' }}>جاهز للتوسع؟</h3>
                             <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', lineHeight: '1.6' }}>
-                                نظام متجر السعيدة يوفر لك تقارير مفصلة لمساعدتك في اتخاذ قرارات دقيقة لنمو متجرك.
+                                نظام متجر الخزرجي يوفر لك تقارير مفصلة لمساعدتك في اتخاذ قرارات دقيقة لنمو متجرك.
                             </p>
                         </div>
                     </div>

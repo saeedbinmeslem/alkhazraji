@@ -116,11 +116,11 @@ export default function AuthModal() {
                         width: '64px',
                         height: '64px',
                         borderRadius: '18px',
-                        background: 'linear-gradient(135deg, var(--primary) 0%, #b8860b 100%)',
+                        background: 'linear-gradient(135deg, var(--primary) 0%, var(--primary) 100%)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        boxShadow: '0 12px 32px rgba(212,175,55,0.35)',
+                        boxShadow: '0 12px 32px rgba(var(--primary-rgb),0.35)',
                     }}>
                         <LogIn size={30} color="var(--btn-text)" strokeWidth={2.5} />
                     </div>
@@ -217,8 +217,8 @@ export default function AuthModal() {
                             borderRadius: '14px',
                             border: 'none',
                             background: isSubmitting
-                                ? 'rgba(212,175,55,0.4)'
-                                : 'linear-gradient(135deg, var(--primary) 0%, #b8860b 100%)',
+                                ? 'rgba(var(--primary-rgb),0.4)'
+                                : 'linear-gradient(135deg, var(--primary) 0%, var(--primary) 100%)',
                             color: 'var(--btn-text)',
                             fontWeight: '900',
                             fontSize: '1rem',
@@ -228,7 +228,7 @@ export default function AuthModal() {
                             justifyContent: 'center',
                             gap: '8px',
                             transition: 'all 0.3s',
-                            boxShadow: isSubmitting ? 'none' : '0 8px 24px rgba(212,175,55,0.3)',
+                            boxShadow: isSubmitting ? 'none' : '0 8px 24px rgba(var(--primary-rgb),0.3)',
                             fontFamily: 'var(--font-main)',
                         }}
                     >
@@ -279,8 +279,8 @@ export default function AuthModal() {
                 }
                 .auth-input-group:focus-within {
                     border-color: var(--primary);
-                    background: rgba(212,175,55,0.06);
-                    box-shadow: 0 0 0 3px rgba(212,175,55,0.08);
+                    background: rgba(var(--primary-rgb),0.06);
+                    box-shadow: 0 0 0 3px rgba(var(--primary-rgb),0.08);
                 }
                 .auth-input-group input {
                     background: transparent;

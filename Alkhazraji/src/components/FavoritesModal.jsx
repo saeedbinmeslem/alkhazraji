@@ -101,7 +101,7 @@ export default function FavoritesModal() {
                                     <div style={{ 
                                         width: '45px', 
                                         height: '45px', 
-                                        background: 'rgba(212,175,55,0.1)', 
+                                        background: 'rgba(var(--primary-rgb),0.1)', 
                                         borderRadius: '12px', 
                                         display: 'flex', 
                                         alignItems: 'center', 
@@ -167,7 +167,7 @@ export default function FavoritesModal() {
                                         <div>
                                             <h3 style={{ fontSize: '1.4rem', fontWeight: '800', marginBottom: '10px' }}>قائمة مفضلاتك فارغة</h3>
                                             <p style={{ color: 'var(--text-dim)', fontSize: '1rem', lineHeight: '1.6' }}>
-                                                لم تقم بإضافة أي منتجات بعد. ابحث عن الساعة التي تحبها وأضفها إلى قائمتك!
+                                                لم تقم بإضافة أي منتجات بعد. ابحث عن المنتج التي تحبها وأضفها إلى قائمتك!
                                             </p>
                                         </div>
                                         <button 
@@ -255,7 +255,7 @@ export default function FavoritesModal() {
                                                             justifyContent: 'center',
                                                             cursor: 'pointer',
                                                             color: '#000',
-                                                            boxShadow: '0 4px 12px rgba(212,175,55,0.2)',
+                                                            boxShadow: '0 4px 12px rgba(var(--primary-rgb),0.2)',
                                                             transition: 'background 0.2s'
                                                         }}
                                                         title="إضافة للسلة (تخصيص)"

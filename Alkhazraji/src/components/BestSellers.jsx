@@ -138,7 +138,7 @@ const BestSellers = () => {
                         أكثر <span style={{ color: 'var(--primary)' }}>الطلبات</span>
                     </h2>
                     <p style={{ color: 'var(--text-dim)', fontSize: '1.2rem' }}>
-                        اكتشف الساعات الأكثر رواجاً واختياراً من قبل عملائنا
+                        اكتشف المستلزمات الأكثر رواجاً واختياراً من قبل عملائنا
                     </p>
                 </motion.div>
 

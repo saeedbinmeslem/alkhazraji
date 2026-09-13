@@ -176,7 +176,7 @@ export default function TaxonomyManager() {
         
         <button 
           onClick={openAddForm}
-          style={{ padding: '12px 24px', background: 'var(--primary)', color: '#000', border: 'none', borderRadius: '14px', fontWeight: '800', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', boxShadow: '0 10px 20px rgba(212, 175, 55, 0.2)' }}
+          style={{ padding: '12px 24px', background: 'var(--primary)', color: '#000', border: 'none', borderRadius: '14px', fontWeight: '800', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', boxShadow: '0 10px 20px rgba(var(--primary-rgb), 0.2)' }}
         >
           <Plus size={20} /> إضافة جديد
         </button>

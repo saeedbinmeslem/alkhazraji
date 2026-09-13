@@ -13,11 +13,10 @@ import './LoginPage.css';
 
 // ─── CONFIG ────────────────────────────────────────────────────────────────
 const WHATSAPP_NUMBERS = [
-  { label: '772754414', value: '967772754414' },
-  { label: '775055319', value: '967775055319' },
+  { label: '772503986', value: '967772503986' }
 ];
 const WHATSAPP_MSG = encodeURIComponent(
-  'السلام عليكم، أريد الحصول على حساب في متجر السعيدة 🛍️'
+  'السلام عليكم، أريد الحصول على حساب في متجر الخزرجي 🛍️'
 );
 // ───────────────────────────────────────────────────────────────────────────
 
@@ -272,7 +271,7 @@ export default function LoginPage() {
           {/* Store Logo */}
           <img
             src="/logo.png"
-            alt="شعار متجر السعيدة"
+            alt="شعار متجر الخزرجي"
             className="lp-left-logo"
           />
 
@@ -283,7 +282,7 @@ export default function LoginPage() {
           </h1>
 
           <p className="lp-left-desc">
-            ساعات فاخرة وإكسسوارات راقية مختارة بعناية لتناسب ذوقك الرفيع
+            مستلزمات فاخرة وإكسسوارات راقية مختارة بعناية لتناسب ذوقك الرفيع
           </p>
 
           {/* Feature chips */}
@@ -303,7 +302,7 @@ export default function LoginPage() {
 
           {/* Logo inside form card */}
           <div className="lp-card-logo-wrap">
-            <img src="/logo.png" alt="شعار متجر السعيدة" className="lp-card-logo" />
+            <img src="/logo.png" alt="شعار متجر الخزرجي" className="lp-card-logo" />
           </div>
 
           {/* Heading */}
@@ -418,7 +417,7 @@ export default function LoginPage() {
 
           {/* Footer */}
           <p className="lp-footer-note">
-            © {new Date().getFullYear()} متجر السعيدة — جميع الحقوق محفوظة
+            © {new Date().getFullYear()} متجر الخزرجي — جميع الحقوق محفوظة
           </p>
         </div>
       </main>

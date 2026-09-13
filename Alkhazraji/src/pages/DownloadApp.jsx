@@ -22,8 +22,8 @@ const DownloadApp = () => {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/alsaeedah-store.apk';
-    link.download = 'alsaeedah-store.apk';
+    link.href = '/Alkhazraji-store.apk';
+    link.download = 'Alkhazraji-store.apk';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -36,8 +36,8 @@ const DownloadApp = () => {
 
   const faqs = [
     { q: 'هل التطبيق متاح للجميع؟', a: 'التطبيق متاح فقط لاصحاب محلات الجمله لسهولة التعامل معهم' },
-    { q: 'كيف أضمن جودة المنتجات؟', a: 'جميع المنتجات المعروضة في متجر السعيدة تخضع لفحص دقيق لضمان الجودة العالية ومطابقتها للمواصفات.' },
-    { q: 'هل هناك دعم فني متوفر؟', a: 'بالتأكيد، فريق الدعم الفني متواجد على مدار الساعة للرد على استفساراتكم وحل أي مشكلة قد تواجهونها.' }
+    { q: 'كيف أضمن جودة المنتجات؟', a: 'جميع المنتجات المعروضة في متجر الخزرجي تخضع لفحص دقيق لضمان الجودة العالية ومطابقتها للمواصفات.' },
+    { q: 'هل هناك دعم فني متوفر؟', a: 'بالتأكيد، فريق الدعم الفني متواجد على مدار المنتج للرد على استفساراتكم وحل أي مشكلة قد تواجهونها.' }
   ];
 
   return (
@@ -60,15 +60,15 @@ const DownloadApp = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <div className="hero-pill">
-              <span style={{ display: 'inline-block', width: '6px', height: '6px', borderRadius: '50%', background: '#d4af37' }}></span>
+              <span style={{ display: 'inline-block', width: '6px', height: '6px', borderRadius: '50%', background: 'var(--primary)' }}></span>
               الإصدار الجديد متاح الآن
             </div>
             <h1 className="editorial-title">
               تسوق بذكاء.<br/>
-              <div style={{marginTop:"7px"}}><span style={{color: '#d4af37' }}>عش بأناقة.</span></div>
+              <div style={{marginTop:"7px"}}><span style={{color: 'var(--primary)' }}>عش بأناقة.</span></div>
             </h1>
             <p className="editorial-subtitle">
-              اكتشف عالم متجر السعيدة من خلال تطبيقنا الجديد. تجربة مستخدم استثنائية، عروض حصرية، وسرعة لا مثيل لها في متناول يدك.
+              اكتشف عالم متجر الخزرجي من خلال تطبيقنا الجديد. تجربة مستخدم استثنائية، عروض حصرية، وسرعة لا مثيل لها في متناول يدك.
             </p>
             
             <div className="hero-actions">

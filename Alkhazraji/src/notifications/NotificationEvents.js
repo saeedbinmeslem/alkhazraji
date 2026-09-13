@@ -25,8 +25,8 @@ import { CHANNELS, ID_RANGES } from './NotificationConstants';
 
 export const FIRST_LAUNCH = {
   channel: CHANNELS.GENERAL.id,
-  title: 'مرحباً بك في السعيدة! 🎉',
-  body: 'اكتشف أحدث الساعات والعروض الحصرية.',
+  title: 'مرحباً بك في الخزرجي! 🎉',
+  body: 'اكتشف أحدث المستلزمات والعروض الحصرية.',
   category: 'GENERAL',
 };
 
@@ -72,7 +72,7 @@ export const REMINDER_7_DAY = {
 export const REMINDER_14_DAY = {
   id: ID_RANGES.REMINDERS.min + 2,  // 3002
   channel: CHANNELS.REMINDERS.id,
-  title: 'ساعات مميزة في انتظارك ⌚',
+  title: 'مستلزمات مميزة في انتظارك ⌚',
   body: 'تصفح أحدث المنتجات واختر ما يناسبك.',
   category: 'REMINDERS',
 };

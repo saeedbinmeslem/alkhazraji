@@ -121,13 +121,13 @@ export const CartProvider = ({ children }) => {
         invoiceDiv.style.direction = 'rtl';
 
         invoiceDiv.innerHTML = `
-            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #d4af37; padding-bottom: 20px; margin-bottom: 30px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--primary); padding-bottom: 20px; margin-bottom: 30px;">
                 <div style="flex: 1; text-align: right;">
-                    <h1 style="color: #d4af37; font-size: 28px; margin: 0 0 10px 0; font-weight: 700;letter-spacing: 0px;">متجر السعيدة</h1>
+                    <h1 style="color: var(--primary); font-size: 28px; margin: 0 0 10px 0; font-weight: 700;letter-spacing: 0px;">متجر الخزرجي</h1>
                     <div style="font-size: 13px; color: #444; line-height: 1.8;">
-                         <p style="margin: 0;"><strong>تواصل : </strong> 772754414, 775055319</p>
-                         <p style="margin: 0;"><strong>الإيميل : </strong> alsaeedah8@gmail.com</p>
-                         <p style="margin: 0; direction: ltr; text-align: right;"><strong>العنوان : </strong> حضرموت / المكلا / الشرج</p>
+                         <p style="margin: 0;"><strong>تواصل : </strong> 772503986</p>
+                         <p style="margin: 0;"><strong>الإيميل : </strong> Alkhazraji8@gmail.com</p>
+                         <p style="margin: 0; direction: ltr; text-align: right;"><strong>العنوان : </strong> اليمن / حضرموت / تريم</p>
                     </div>
                 </div>
                 <div style="flex: 1; text-align: center;justify-content:center;">
@@ -135,8 +135,8 @@ export const CartProvider = ({ children }) => {
                 </div>
                 <div style="flex: 1; text-align: left; display: flex; flex-direction: column; justify-content: space-between; height: 100px;">
                     <div>
-                        <p style="margin: 0; font-size: 15px; color: #d4af37; font-weight: bold; font-style: italic;">"الفخامة ... في كل ثانية"</p>
-                        <p style="margin: 5px 0 0; color: #888; font-size: 11px;">نصنع التميز، لنهديه إليكم</p>
+                        <p style="margin: 0; font-size: 15px; color: var(--primary); font-weight: bold; font-style: italic;">"دليلك لصناعة مشروعك الدواجني"</p>
+                        <p style="margin: 5px 0 0; color: #888; font-size: 11px;">توفير انواع فقاسات البيض وتوفير انواع حضانات الطيور وتوفير مستلزمات الدواجن</p>
                     </div>
                     <div style="font-size: 12px; color: #666;">
                         <span style="display: block; margin-bottom: 3px;">رقم الفاتورة: <strong>${invoiceId}</strong></span>
@@ -147,13 +147,13 @@ export const CartProvider = ({ children }) => {
             
             <div data-segment="customer-info" style="display: flex; gap: 40px; margin-bottom: 30px; padding: 20px; background: #f9f9f9; border-radius: 8px; border: 1px solid #eee;">
                 <div style="flex: 1;">
-                    <h3 style="color: #d4af37; margin-bottom: 10px; font-size: 16px;letter-spacing: 0px;">بيانات العميل</h3>
+                    <h3 style="color: var(--primary); margin-bottom: 10px; font-size: 16px;letter-spacing: 0px;">بيانات العميل</h3>
                     <p style="margin: 5px 0;"><strong> الاسم : </strong> ${currentUser?.name || ''}</p>
                     <p style="margin: 5px 0;"><strong> واتساب : </strong> ${currentUser?.whatsapp || ''}</p>
                     <p style="margin: 5px 0;"><strong>الإيميل : </strong> ${currentUser?.email || ''}</p>
                 </div>
                 <div style="flex: 1;">
-                    <h3 style="color: #d4af37; margin-bottom: 10px; font-size: 16px;letter-spacing: 0px;">عنوان التوصيل</h3>
+                    <h3 style="color: var(--primary); margin-bottom: 10px; font-size: 16px;letter-spacing: 0px;">عنوان التوصيل</h3>
                     <p style="margin: 5px 0;"><strong> المحافظة : </strong> ${currentUser?.governorate || ''}</p>
                     <p style="margin: 5px 0;"><strong>المديرية : </strong> ${currentUser?.district || ''}</p>
                     <p style="margin: 5px 0;"><strong>الحي : </strong> ${currentUser?.neighborhood || ''}</p>
@@ -162,12 +162,12 @@ export const CartProvider = ({ children }) => {
 
             <table style="width: 100%; border-collapse: collapse; margin-bottom: 30px;">
                 <thead>
-                    <tr style="background: rgba(212, 175, 55, 0.1); color: #000;">
-                        <th style="padding: 15px; text-align: right; border-bottom: 2px solid #d4af37;">رقم الموديل</th>
-                        <th style="padding: 15px; text-align: right; border-bottom: 2px solid #d4af37;">المنتج</th>
-                        <th style="padding: 15px; text-align: center; border-bottom: 2px solid #d4af37;">السعر</th>
-                        <th style="padding: 15px; text-align: center; border-bottom: 2px solid #d4af37;">الكمية</th>
-                        <th style="padding: 15px; text-align: left; border-bottom: 2px solid #d4af37;">الإجمالي</th>
+                    <tr style="background: rgba(var(--primary-rgb), 0.1); color: #000;">
+                        <th style="padding: 15px; text-align: right; border-bottom: 2px solid var(--primary);">رقم الموديل</th>
+                        <th style="padding: 15px; text-align: right; border-bottom: 2px solid var(--primary);">المنتج</th>
+                        <th style="padding: 15px; text-align: center; border-bottom: 2px solid var(--primary);">السعر</th>
+                        <th style="padding: 15px; text-align: center; border-bottom: 2px solid var(--primary);">الكمية</th>
+                        <th style="padding: 15px; text-align: left; border-bottom: 2px solid var(--primary);">الإجمالي</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -179,7 +179,7 @@ export const CartProvider = ({ children }) => {
                             </td>
                             <td style="padding: 15px; text-align: center; color: #333;">${item.price.toLocaleString()} ر.س</td>
                             <td style="padding: 15px; text-align: center; color: #333;">${item.dp_qty}</td>
-                            <td style="padding: 15px; text-align: left; color: #d4af37; font-weight: bold;">${(item.price * item.dp_qty).toLocaleString()} ر.س</td>
+                            <td style="padding: 15px; text-align: left; color: var(--primary); font-weight: bold;">${(item.price * item.dp_qty).toLocaleString()} ر.س</td>
                         </tr>
                     `).join('')}
                 </tbody>
@@ -188,12 +188,12 @@ export const CartProvider = ({ children }) => {
             <div data-segment="total" style="display: flex; flex-direction: column; align-items: flex-start; margin-top: 30px; padding: 20px; background: #fcfcfc; border: 1px solid #eee; border-radius: 8px;">
                 <div style="width: 100%; display: flex; justify-content: space-between; font-size: 22px; font-weight: bold;">
                     <span style="color: #000;">الإجمالي الكلي:</span>
-                    <span style="color: #d4af37;">${total.toLocaleString()} ر.س</span>
+                    <span style="color: var(--primary);">${total.toLocaleString()} ر.س</span>
                 </div>
             </div>
             
             <div style="margin-top: 60px; text-align: center; color: #888; font-size: 13px;">
-                <p style="margin-bottom: 5px;">نشكركم على اختياركم متجر السعيدة - الفخامة في كل ثانية</p>
+                <p style="margin-bottom: 5px;">نشكركم على اختياركم متجر الخزرجي - دليلك لصناعة مشروعك الدواجني</p>
             </div>
         `;
 

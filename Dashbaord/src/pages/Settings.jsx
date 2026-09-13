@@ -47,7 +47,7 @@ const SortableSlide = ({ slide, index, isExpanded, onToggle, onRemove, onImageUp
     const style = {
         transform: CSS.Transform.toString(transform),
         transition,
-        background: isDragging ? 'rgba(212, 175, 55, 0.15)' : 'rgba(255,255,255,0.02)',
+        background: isDragging ? 'rgba(var(--primary-rgb), 0.15)' : 'rgba(255,255,255,0.02)',
         borderRadius: '24px',
         border: isDragging ? '1px solid var(--primary)' : '1px solid var(--border-color)',
         overflow: 'hidden',
@@ -70,7 +70,7 @@ const SortableSlide = ({ slide, index, isExpanded, onToggle, onRemove, onImageUp
                     justifyContent: 'space-between', 
                     alignItems: 'center',
                     cursor: 'pointer',
-                    background: isExpanded ? 'rgba(212, 175, 55, 0.05)' : 'transparent',
+                    background: isExpanded ? 'rgba(var(--primary-rgb), 0.05)' : 'transparent',
                     borderBottom: isExpanded ? '1px solid var(--border-color)' : 'none',
                     transition: '0.3s'
                 }}
@@ -80,13 +80,13 @@ const SortableSlide = ({ slide, index, isExpanded, onToggle, onRemove, onImageUp
                     <div 
                         {...attributes} 
                         {...listeners} 
-                        style={{ cursor: 'grab', padding: '8px', color: 'var(--primary)', touchAction: 'none', background: 'rgba(212, 175, 55, 0.1)', borderRadius: '10px' }}
+                        style={{ cursor: 'grab', padding: '8px', color: 'var(--primary)', touchAction: 'none', background: 'rgba(var(--primary-rgb), 0.1)', borderRadius: '10px' }}
                         onClick={(e) => e.stopPropagation()} 
                     >
                         <GripVertical size={isMobile ? 18 : 20} />
                     </div>
                     {!isMobile && (
-                        <div style={{ width: '40px', height: '40px', borderRadius: '12px', background: 'var(--primary)', color: '#000', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: '900', fontSize: '1.2rem', boxShadow: '0 4px 10px rgba(212, 175, 55, 0.3)' }}>
+                        <div style={{ width: '40px', height: '40px', borderRadius: '12px', background: 'var(--primary)', color: '#000', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: '900', fontSize: '1.2rem', boxShadow: '0 4px 10px rgba(var(--primary-rgb), 0.3)' }}>
                             {index + 1}
                         </div>
                     )}
@@ -367,7 +367,7 @@ const Settings = () => {
         const newSlide = {
             id: tempId,
             title: 'شريحة ملكية جديدة',
-            description: 'وصف قصير لهذه الشريحة الرائعة في واجهة متجر السعيدة.',
+            description: 'وصف قصير لهذه الشريحة الرائعة في واجهة متجر الخزرجي.',
             image_url: 'https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?q=80&w=2070',
             sort_order: nextSortOrder
         };
@@ -555,7 +555,7 @@ const Settings = () => {
     if (isInitialLoading) {
         return (
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', flexDirection: 'column', gap: '20px' }}>
-                <div style={{ width: '40px', height: '40px', border: '3px solid rgba(212, 175, 55, 0.3)', borderTopColor: 'var(--primary)', borderRadius: '50%', animation: 'spin 1s linear infinite' }} />
+                <div style={{ width: '40px', height: '40px', border: '3px solid rgba(var(--primary-rgb), 0.3)', borderTopColor: 'var(--primary)', borderRadius: '50%', animation: 'spin 1s linear infinite' }} />
                 <p style={{ color: 'var(--text-muted)' }}>جاري تحميل الإعدادات...</p>
                 <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
             </div>
@@ -610,7 +610,7 @@ const Settings = () => {
                                 whileTap={{ scale: 0.95 }}
                                 className="btn-primary" 
                                 onClick={saveSettings} 
-                                style={{ width: isMobile ? '100%' : 'auto', padding: isMobile ? '12px 20px' : '14px 28px', borderRadius: '16px', fontWeight: '800', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', background: 'var(--primary)', color: '#000', border: 'none', cursor: 'pointer', boxShadow: '0 10px 25px rgba(212, 175, 55, 0.35)', fontSize: isMobile ? '0.9rem' : '1rem' }}
+                                style={{ width: isMobile ? '100%' : 'auto', padding: isMobile ? '12px 20px' : '14px 28px', borderRadius: '16px', fontWeight: '800', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', background: 'var(--primary)', color: '#000', border: 'none', cursor: 'pointer', boxShadow: '0 10px 25px rgba(var(--primary-rgb), 0.35)', fontSize: isMobile ? '0.9rem' : '1rem' }}
                             >
                                 حفظ التغييرات <Save size={isMobile ? 18 : 20} />
                             </motion.button>
@@ -630,7 +630,7 @@ const Settings = () => {
             }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: isMobile ? '20px' : '32px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? '12px' : '16px' }}>
-                        <div style={{ width: isMobile ? '40px' : '48px', height: isMobile ? '40px' : '48px', borderRadius: '12px', background: 'rgba(212, 175, 55, 0.1)', color: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <div style={{ width: isMobile ? '40px' : '48px', height: isMobile ? '40px' : '48px', borderRadius: '12px', background: 'rgba(var(--primary-rgb), 0.1)', color: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <Layout size={isMobile ? 20 : 24} />
                         </div>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
@@ -644,8 +644,8 @@ const Settings = () => {
                                         exit={{ opacity: 0, scale: 0.6 }}
                                         style={{
                                             display: 'flex', alignItems: 'center', gap: '6px',
-                                            background: 'rgba(212, 175, 55, 0.12)',
-                                            border: '1px solid rgba(212, 175, 55, 0.35)',
+                                            background: 'rgba(var(--primary-rgb), 0.12)',
+                                            border: '1px solid rgba(var(--primary-rgb), 0.35)',
                                             borderRadius: '20px',
                                             padding: '4px 10px',
                                             fontSize: '0.72rem',
@@ -654,7 +654,7 @@ const Settings = () => {
                                             whiteSpace: 'nowrap'
                                         }}
                                     >
-                                        <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: 'var(--primary)', display: 'inline-block', boxShadow: '0 0 6px rgba(212,175,55,0.8)', animation: 'pulse-dot 1.4s ease-in-out infinite' }} />
+                                        <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: 'var(--primary)', display: 'inline-block', boxShadow: '0 0 6px rgba(var(--primary-rgb),0.8)', animation: 'pulse-dot 1.4s ease-in-out infinite' }} />
                                         تغييرات غير محفوظة
                                     </motion.div>
                                 )}
@@ -690,14 +690,14 @@ const Settings = () => {
                 </div>
 
                 <motion.button 
-                    whileHover={{ background: 'rgba(212, 175, 55, 0.05)', scale: 1.01 }}
+                    whileHover={{ background: 'rgba(var(--primary-rgb), 0.05)', scale: 1.01 }}
                     onClick={addNewSlide}
                     style={{ 
                         width: '100%', 
                         marginTop: '10px', 
                         padding: '24px', 
                         background: 'transparent', 
-                        border: '2px dashed rgba(212, 175, 55, 0.3)', 
+                        border: '2px dashed rgba(var(--primary-rgb), 0.3)', 
                         color: 'var(--primary)', 
                         borderRadius: '24px', 
                         cursor: 'pointer',
@@ -724,7 +724,7 @@ const Settings = () => {
                 boxShadow: '0 30px 60px rgba(0,0,0,0.5)',
                 marginTop: '40px'
             }}>
-                <div style={{ padding: isMobile ? '20px' : '32px', borderBottom: '1px solid var(--border-color)', background: 'linear-gradient(to right, rgba(212,175,55,0.05), transparent)' }}>
+                <div style={{ padding: isMobile ? '20px' : '32px', borderBottom: '1px solid var(--border-color)', background: 'linear-gradient(to right, rgba(var(--primary-rgb),0.05), transparent)' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? '12px' : '16px' }}>
                         <div style={{ width: isMobile ? '40px' : '48px', height: isMobile ? '40px' : '48px', borderRadius: '12px', background: 'var(--primary)', color: '#000', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <Rocket size={isMobile ? 20 : 24} />
@@ -746,7 +746,7 @@ const Settings = () => {
                         <div style={{ position: 'relative', marginBottom: isMobile ? '20px' : '28px' }}>
                             <input 
                                 type="text"
-                                placeholder="ابحث باسم الساعة..."
+                                placeholder="ابحث باسم المنتج..."
                                 value={hubSearch}
                                 onChange={(e) => handleHubSearch(e.target.value)}
                                 style={{ width: '100%', padding: '12px 16px', paddingRight: '40px', background: 'rgba(255,255,255,0.03)', border: '1px solid var(--border-color)', borderRadius: '14px', color: '#fff', outline: 'none', fontSize: '0.9rem', transition: '0.3s' }}

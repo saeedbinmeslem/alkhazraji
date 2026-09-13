@@ -65,7 +65,7 @@ export default function TaxonomyList({ items, onEdit, onDeactivate, onMoveUp, on
             <button 
               onClick={() => onEdit(item)} 
               title="تعديل"
-              style={{ padding: '8px', background: 'rgba(212, 175, 55, 0.1)', color: 'var(--primary)', border: 'none', borderRadius: '10px', cursor: 'pointer', transition: '0.3s' }}
+              style={{ padding: '8px', background: 'rgba(var(--primary-rgb), 0.1)', color: 'var(--primary)', border: 'none', borderRadius: '10px', cursor: 'pointer', transition: '0.3s' }}
             >
               <Edit2 size={18} />
             </button>

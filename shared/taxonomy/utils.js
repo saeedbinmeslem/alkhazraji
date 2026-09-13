@@ -31,10 +31,10 @@ export function normalizeName(name) {
  * @returns {string} The slugified string.
  *
  * @example
- * createSlug("Men's Watches")        // → "mens-watches"
- * createSlug("ساعات رجالية")         // → "ساعات-رجالية"
- * createSlug("ساعات Casio رجالية")   // → "ساعات-casio-رجالية"
- * createSlug("Watches   &   Bags")   // → "watches-bags"
+ * createSlug("Men's supplies")        // → "mens-supplies"
+ * createSlug("مستلزمات رجالية")         // → "مستلزمات-رجالية"
+ * createSlug("مستلزمات Casio رجالية")   // → "مستلزمات-casio-رجالية"
+ * createSlug("supplies   &   Bags")   // → "supplies-bags"
  * createSlug("")                      // → ""
  */
 export function createSlug(text) {

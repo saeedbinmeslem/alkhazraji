@@ -208,7 +208,7 @@ const EditProduct = () => {
             key={id}
             initialData={initialData}
             onSubmit={handleSubmit}
-            title="تعديل الساعة"
+            title="تعديل المنتج"
             subTitle="يمكنك تعديل أي من التفاصيل أدناه"
         />
     );

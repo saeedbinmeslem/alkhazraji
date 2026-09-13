@@ -496,10 +496,10 @@ const Products = () => {
     };
 
     const summaryStats = [
-        { label: 'إجمالي المخزون', value: totalStats.total, icon: <Package size={22} />, color: 'var(--primary)', bg: 'rgba(212, 175, 55, 0.1)' },
-        { label: 'ساعات رجالية', value: totalStats.men, icon: <Users size={22} />, color: '#10b981', bg: 'rgba(16, 185, 129, 0.1)' },
-        { label: 'ساعات نسائية', value: totalStats.women, icon: <ShoppingBag size={22} />, color: '#ec4899', bg: 'rgba(236, 72, 153, 0.1)' },
-        { label: 'ساعات أطفال', value: totalStats.kids, icon: <Activity size={22} />, color: '#3b82f6', bg: 'rgba(59, 130, 246, 0.1)' },
+        { label: 'إجمالي المخزون', value: totalStats.total, icon: <Package size={22} />, color: 'var(--primary)', bg: 'rgba(var(--primary-rgb), 0.1)' },
+        { label: 'مستلزمات رجالية', value: totalStats.men, icon: <Users size={22} />, color: '#10b981', bg: 'rgba(16, 185, 129, 0.1)' },
+        { label: 'مستلزمات نسائية', value: totalStats.women, icon: <ShoppingBag size={22} />, color: '#ec4899', bg: 'rgba(236, 72, 153, 0.1)' },
+        { label: 'مستلزمات أطفال', value: totalStats.kids, icon: <Activity size={22} />, color: '#3b82f6', bg: 'rgba(59, 130, 246, 0.1)' },
     ];
 
     // Determine Select All button label
@@ -531,7 +531,7 @@ const Products = () => {
                     }}>
                         إدارة المخزون <span style={{ color: 'var(--primary)', fontSize: isMobile ? '0.9rem' : '1.2rem', verticalAlign: 'middle', opacity: 0.8 }}>| مركز المنتجات</span>
                     </h1>
-                    <p style={{ color: 'var(--text-muted)', fontSize: isMobile ? '0.95rem' : '1.1rem' }}>التحكم الكامل في تشكيلة الساعات الراقية لمتجر السعيدة.</p>
+                    <p style={{ color: 'var(--text-muted)', fontSize: isMobile ? '0.95rem' : '1.1rem' }}>التحكم الكامل في تشكيلة المستلزمات الراقية لمتجر الخزرجي.</p>
                 </div>
                 <div style={{ display: 'flex', gap: '12px', width: isMobile ? '100%' : 'auto' }}>
                     {selectedProducts.size > 0 ? (
@@ -588,10 +588,10 @@ const Products = () => {
                                         background: 'var(--primary)', color: '#000', border: 'none',
                                         fontWeight: '800', cursor: 'pointer', display: 'flex',
                                         alignItems: 'center', justifyContent: 'center', gap: '10px',
-                                        boxShadow: '0 10px 25px rgba(212, 175, 55, 0.2)', fontSize: '0.9rem'
+                                        boxShadow: '0 10px 25px rgba(var(--primary-rgb), 0.2)', fontSize: '0.9rem'
                                     }}
                                 >
-                                    <Plus size={20} /> إضافة ساعة جديدة
+                                    <Plus size={20} /> إضافة منتج جديد
                                 </motion.button>
                             </Link>
                         </>
@@ -740,7 +740,7 @@ const ProductCard = ({ product, index, isSelected, onToggle, onDelete, onToggleL
                 <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.4), transparent 40%, transparent 60%, rgba(0,0,0,0.8))' }} />
 
                 {/* ID Badge */}
-                <div style={{ position: 'absolute', top: '16px', right: '16px', background: 'rgba(212, 175, 55, 0.9)', color: '#000', padding: '6px 14px', borderRadius: '12px', fontSize: '0.8rem', fontWeight: '900', backdropFilter: 'blur(5px)' }}>
+                <div style={{ position: 'absolute', top: '16px', right: '16px', background: 'rgba(var(--primary-rgb), 0.9)', color: '#000', padding: '6px 14px', borderRadius: '12px', fontSize: '0.8rem', fontWeight: '900', backdropFilter: 'blur(5px)' }}>
                     #{product.displayId || '---'}
                 </div>
 

@@ -78,7 +78,7 @@ export default function AppDownloadBanner() {
                                 width: '52px',
                                 height: '52px',
                                 borderRadius: '14px',
-                                background: 'linear-gradient(135deg, #d4af37, #f1d592)',
+                                background: 'linear-gradient(135deg, var(--primary), #f1d592)',
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
@@ -92,7 +92,7 @@ export default function AppDownloadBanner() {
                         </div>
                         
                         <div style={{ flex: 1 }}>
-                            <h4 style={{ color: 'var(--text-main)', fontSize: '1rem', fontWeight: '900', marginBottom: '2px' }}>متجر السعيدة للأندرويد</h4>
+                            <h4 style={{ color: 'var(--text-main)', fontSize: '1rem', fontWeight: '900', marginBottom: '2px' }}>متجر الخزرجي للأندرويد</h4>
                             <p style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', lineHeight: '1.3', fontWeight: '500' }}>
                                 تجربة تسوق متكاملة، أسرع وبدون انقطاع
                             </p>
@@ -114,7 +114,7 @@ export default function AppDownloadBanner() {
                                     alignItems: 'center',
                                     gap: '8px',
                                     cursor: 'pointer',
-                                    boxShadow: '0 8px 20px rgba(212, 175, 55, 0.2)'
+                                    boxShadow: '0 8px 20px rgba(var(--primary-rgb), 0.2)'
                                 }}
                             >
                                 <Download size={18} strokeWidth={3} />

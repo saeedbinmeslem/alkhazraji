@@ -14,7 +14,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-const email = "alsaeedah8@gmail.com";
+const email = "Alkhazraji8@gmail.com";
 const password = "770822310saeed";
 
 async function test() {
